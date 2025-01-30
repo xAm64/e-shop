@@ -2,14 +2,15 @@
     "produits":[{
         "nom":"test0",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel metus metus. Cras dictum commodo pharetra. Pellentesque in velit id erat laoreet vulputate. In euismod diam vitae enim dapibus rutrum. Aliquam eu metus sagittis, interdum metus vitae, sagittis nulla. Phasellus a facilisis nunc. Donec cursus ultrices lobortis. Etiam eleifend mauris dui, vitae maximus elit congue vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ut odio eget ante porttitor varius nec vitae mauris. Vestibulum at libero orci. Sed eleifend sodales dolor, a luctus mauris. Integer sagittis id est a porttitor. ",
+        "categiorie":["A", "B"],
         "stock":5,
         "price":19.99
         },{
         "nom":"test1",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel metus metus. Cras dictum commodo pharetra. Pellentesque in velit id erat laoreet vulputate. In euismod diam vitae enim dapibus rutrum. Aliquam eu metus sagittis, interdum metus vitae, sagittis nulla. Phasellus a facilisis nunc. Donec cursus ultrices lobortis. Etiam eleifend mauris dui, vitae maximus elit congue vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ut odio eget ante porttitor varius nec vitae mauris. Vestibulum at libero orci. Sed eleifend sodales dolor, a luctus mauris. Integer sagittis id est a porttitor. ",
+        "categiorie":["B"],
         "quantity":5,
         "price":19.99
         }
     ]
-    
 }
