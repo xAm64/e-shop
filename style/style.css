@@ -1,22 +1,64 @@
+/* variables ************************************************************************************************************************************************************************************/
+:root{
+    /* principales / main */
+    --gazon: #BDE038;
+    --moutarde: #A3AB78;
+    --taupe: #818274;
+    --bleuVertAcier: #506266;
+    --vertMinuit: #10454F;
+    /* secondaires / secondary*/
+    --blancTilleul: #e0e7c8;
+}
+
+#logoSite {
+    height: 70px;
+}
+
+/* général / general **************************************************************************************************************************************************************************/
 * {box-sizing: border-box;}
 
 body {
-    background: #d4e1d4;
-    color: #021402;
+    background: var(--blancTilleul);
+    color: var(--vertMinuit);
     margin: 0;
     padding: 0;
 }
-
+/* entête / header *****************************************************************************************************************************************************************************/
 header {
     height: 130px;
-    border: 1px solid red;
+    background: var(--bleuVertAcier);
+    color: var(--gazon);
+    padding: 8px;
+}
+header nav {
+    background-color: var(--taupe);
+    overflow: hidden;
+}
+header nav ul li {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li a {
+    display: block;
+    color: var(--blancTilleul);
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    background-color: var(--vertMinuit);
+    border-radius: 8px;
 }
 
+/* main************************************************************************************************************************************************************************************/
 main {
     height: 1fr;
     border: 1px solid blue;
 }
 
+/* footer ************************************************************************************************************************************************************************************/
 footer {
     height: 100px;
     border: 1px solid green;
