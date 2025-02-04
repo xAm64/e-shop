@@ -30,7 +30,7 @@ function displayProducts(data) {
             <h4>${product.nom}</h4>
             <p class="description">${product.description}</p>
             <p class="category">${product.categiorie.join(', ')}</p>
-            <img src="images/produits/${product.image}" alt="${product.nom}">
+            <div class="produit-image" style="background-image: url('../images/produits/${product.image}')"></div>
             <p class="prix">${product.price} €</p>
         `;
         productsContainer.appendChild(productCard);
