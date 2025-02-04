@@ -197,12 +197,20 @@
         color: var(--vertMinuit);
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .card img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: center;
         height: 200px;
         object-fit: cover;
         border-radius: 6px;
+        display: block;
+        margin: 0 auto;
     }
     .card h4 {
         text-align: center;
