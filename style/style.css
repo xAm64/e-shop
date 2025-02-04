@@ -1,131 +1,171 @@
-/* variables ************************************************************************************************************************************************************************************/
+    /* variables ************************************************************************************************************************************************************************************/
+    
+    /* source https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+     :root {
+        /* principales / main */
+        --gazon: #BDE038;
+        --moutarde: #A3AB78;
+        --taupe: #818274;
+        --bleuVertAcier: #506266;
+        --vertMinuit: #10454F;
+        /* secondaires / secondary*/
+        --blancTilleul: #e0e7c8;
+        --rouge : #db4f2c;
+    }
 
-:root {
-    /* principales / main */
-    --gazon: #BDE038;
-    --moutarde: #A3AB78;
-    --taupe: #818274;
-    --bleuVertAcier: #506266;
-    --vertMinuit: #10454F;
-    /* secondaires / secondary*/
-    --blancTilleul: #e0e7c8;
-}
+    /* source https://www.w3schools.com/css/css3_fonts.asp */
+    @font-face {
+        font-family: FiraSans;
+        src: url(../fonts/FiraSans-Regular.ttf);
+    }
+    @font-face {
+        font-family: Cmu;
+        src: url(../fonts/cmu.ttf);
+    }
+    
+    #logoSite {
+        height: 60px;
+        margin: -20px 25px 0 0;
+    }
+    
+    #banner-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        ;
+    }
 
-#logoSite {
-    height: 60px;
-    margin: -20px 25px 0 0;
-}
+    .danger {
+        color: var(--rouge);
+        font-weight: 660;
+    }
+    
+    .search-bar input {
+        width: 300px;
+        height: 30px;
+        border: 1px solid var(--gazon);
+        color: var(--vertMinuit);
+        background-color: var(--blancTilleul);
+        border-radius: 9px;
+        padding: 0 6px;
+        font-family: Cmu;
+        font-size: 15px;
+    }
+    .search-bar input:focus {
+        outline: none;
+        border: 1px solid var(--moutarde);
+    }
+    
+    .user-login img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    /* général / general **************************************************************************************************************************************************************************/
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        background-image: url("../images/fond.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    body {
+        background: var(--blancTilleul);
+        opacity: 96%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    /* entête / header *****************************************************************************************************************************************************************************/
+    
+    header {
+        height: 130px;
+        background: var(--bleuVertAcier);
+        color: var(--gazon);
+        flex-shrink: 0;
+        border-radius: 0 0 6% 6%;
+        font-size: 20px;
+        font-family: FiraSans;
+    }
+    
+    header nav {
+        background-color: var(--taupe);
+        overflow: hidden;
+    }
+    
+    header nav ul li {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header nav ul li a {
+        display: block;
+        color: var(--blancTilleul);
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+    
+    header nav ul li a:hover {
+        color: var(--vertMinuit);
+    }
 
-#banner-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    ;
-}
+    #current-time {
+        margin-left: 40px;
+        text-align: right;
+    }
+    #navbar-login {
+        margin-right: 40px;
+        text-align: left;
+    }
 
-.search-bar input {
-    width: 300px;
-    height: 30px;
-    border: 1px solid var(--gazon);
-    color: var(--vertMinuit);
-    background-color: var(--blancTilleul);
-    border-radius: 9px;
-    padding: 0 6px;
-}
-
-.user-login img {
-    width: 25px;
-    height: 25px;
-}
-
-.center {
-    text-align: center;
-}
-
-
-/* général / general **************************************************************************************************************************************************************************/
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background: var(--blancTilleul);
-    color: var(--vertMinuit);
-    margin: 0;
-    padding: 0;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-
-/* entête / header *****************************************************************************************************************************************************************************/
-
-header {
-    height: 130px;
-    background: var(--bleuVertAcier);
-    color: var(--gazon);
-}
-
-header nav {
-    background-color: var(--taupe);
-    overflow: hidden;
-}
-
-header nav ul li {
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li a {
-    display: block;
-    color: var(--blancTilleul);
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    color: var(--vertMinuit);
-}
-
-
-/* main************************************************************************************************************************************************************************************/
-
-main {
-    height: 1fr;
-    padding: 8px;
-}
-
-
-/* footer ************************************************************************************************************************************************************************************/
-
-footer {
-    height: 60px;
-    background: var(--moutarde);
-    padding: 8px;
-}
-
-footer nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-footer nav ul li {
-    margin: 0 10px;
-}
-
-footer nav ul li a {
-    text-decoration: none;
-    color: var(--vertMinuit);
-}
-
-footer nav ul li a:hover {
-    text-decoration: underline;
-}
+    /* main************************************************************************************************************************************************************************************/
+    
+    main {
+        flex-grow: 1;
+        padding: 8px;
+        font-size: 18px;
+        font-family: Cmu;
+    }
+    /* footer ************************************************************************************************************************************************************************************/
+    
+    footer {
+        height: 60px;
+        background: var(--moutarde);
+        padding: 8px;
+        border-radius: 6% 6% 0 0;
+    }
+    
+    footer nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer nav ul li {
+        margin: 0 10px;
+    }
+    
+    footer nav ul li a {
+        text-decoration: none;
+        color: var(--vertMinuit);
+    }
+    
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }

@@ -1,16 +1,215 @@
 {
-    "produits":[{
-        "nom":"test0",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel metus metus. Cras dictum commodo pharetra. Pellentesque in velit id erat laoreet vulputate. In euismod diam vitae enim dapibus rutrum. Aliquam eu metus sagittis, interdum metus vitae, sagittis nulla. Phasellus a facilisis nunc. Donec cursus ultrices lobortis. Etiam eleifend mauris dui, vitae maximus elit congue vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ut odio eget ante porttitor varius nec vitae mauris. Vestibulum at libero orci. Sed eleifend sodales dolor, a luctus mauris. Integer sagittis id est a porttitor. ",
-        "categiorie":["A", "B"],
+    "produits":[
+        {
+        "nom":"clavier Thrust",
+        "description":"Clavier est pour tout usages, avec pavé numérique. Se branche sur un port USB.",
+        "categiorie":["clavier"],
+        "image": "clavier/thrust.jpg",
         "stock":5,
-        "price":19.99
+        "price":11.95
         },{
-        "nom":"test1",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel metus metus. Cras dictum commodo pharetra. Pellentesque in velit id erat laoreet vulputate. In euismod diam vitae enim dapibus rutrum. Aliquam eu metus sagittis, interdum metus vitae, sagittis nulla. Phasellus a facilisis nunc. Donec cursus ultrices lobortis. Etiam eleifend mauris dui, vitae maximus elit congue vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ut odio eget ante porttitor varius nec vitae mauris. Vestibulum at libero orci. Sed eleifend sodales dolor, a luctus mauris. Integer sagittis id est a porttitor. ",
-        "categiorie":["B"],
-        "quantity":5,
-        "price":19.99
+        "nom":"clavier Logitech",
+        "description":"Clavier avec des lettres aggrandit affin de facilité son utilisation dispose du pavé numérique. Se branche sur un port USB.",
+        "categiorie":["clavier"],
+        "image": "clavier/logitech.jpg",
+        "stock":3,
+        "price":15.95
+        },{
+        "nom":"Clavier Sans fil",
+        "description":"Si avoir des fils est un cauchemer, ce clavier est fait pour vous. Se branche sur un port USB, fonctionne avec des piles AAA fournis.",
+        "categiorie":["clavier"],
+        "image": "clavier/Sans-fil.jpg",
+        "stock":4,
+        "price":19.95
+        },{
+        "nom":"clavier Gamer",
+        "description":"Clavier avec rétroéclairage RVB, pour les gamers, et personnes utilisant l'ordinateur dans des milieux sombres. Se branche sur un port USB.",
+        "categiorie":["clavier"],
+        "image": "clavier/gamming.jpg",
+        "stock":2,
+        "price":99.95
+        },{
+        "nom":"Sourie droitier ergonomique",
+        "description":"Cette sourie est parfaite pour tout usage, son ergonomie permet de l'utiliser longtemps. Se branche sur USB.",
+        "categiorie":["souris"],
+        "image": "souris/D-ergonomique.jpg",
+        "stock":4,
+        "price":14.95
+        },{
+        "nom":"Sourie droitier gammer RVB",
+        "description":"Cette sourie RVB plaira a tout les gamers, elle est ergonomique et permet de jouer longtemps sans douleur. Se branche sur USB.",
+        "categiorie":["souris"],
+        "image": "souris/D-gammer.jpg",
+        "stock":2,
+        "price":39.95
+        },{
+        "nom":"Sourie droitier Logitech",
+        "description":"Cette sourie pas cher est parfait pour tous les usages. Se branche sur un port USB.",
+        "categiorie":["souris"],
+        "image": "souris/D-logitech.jpg",
+        "stock":7,
+        "price":11.95
+        },{
+        "nom":"Sourie droitier sans fil",
+        "description":"Vous n'aimez pas les fils, cette sourie est parfaite pour vous. Se branche sur un port USB, fonctionne avec une pile AA fournis.",
+        "categiorie":["souris"],
+        "image": "souris/D-sans-fil.jpg",
+        "stock":4,
+        "price":18.95
+        },{
+        "nom":"Sourie droitier verticale",
+        "description":"Cette sourie est parfaite pour tout usage sur du long terme, son ergonomie permet de l'utiliser longtemps. Se branche sur USB.",
+        "categiorie":["souris"],
+        "image": "souris/D-verticale.jpg",
+        "stock":4,
+        "price":24.95
+        },{
+        "nom":"Sourie gaucher verticale sans fil",
+        "description":"Si vous êtes gaucher et détester les fils, cette sourie est faite pour vous. Se branche sur USB, fonctionne avec une pile AA fournis.",
+        "categiorie":["souris"],
+        "image": "souris/G-verticale-sans-fil.jpg",
+        "stock":2,
+        "price":19.95
+        },{
+        "nom":"Sourie gaucher ergonomique",
+        "description":"Être gaucher n'est pas un problème avec cette sourie ergonomique. Se branche sur USB.",
+        "categiorie":["souris"],
+        "image": "souris/G-vertical.jpg",
+        "stock":2,
+        "price":16.95
+        },{
+        "nom":"Ensemble clavier, souris ergonomique",
+        "description":"Grace a cette ensemble ergonomique, vous pouvez utiliser votre ordinateur pendant des heures sans douleur. Se branche sur USB.",
+        "categiorie":["clavier", "souris", "ensemble"],
+        "image": "ensemble/ergonomique.jpg",
+        "stock":3,
+        "price":34.95
+        },{
+        "nom":"Ensemble clavier, souris gamer",
+        "description":"Les joueurs vont s'amuser avec cette ensemble gamer. Se branche sur USB.",
+        "categiorie":["clavier", "souris", "ensemble"],
+        "image": "ensemble/gammer.jpg",
+        "stock":2,
+        "price":79.95
+        },{
+        "nom":"Ensemble clavier, souris Logitech",
+        "description":"Cette enseble vous permettra de travailler ou jouer sans problème. Se branche sur USB.",
+        "categiorie":["clavier", "souris", "ensemble"],
+        "image": "ensemble/Logitech-fil.jpg",
+        "stock":7,
+        "price":24.95
+        },{
+        "nom":"Ensemble clavier, souris Logitech sans fil",
+        "description":"Vous n'aimez pas les fils, pas de souci, cette ensemble est fait pour vous. Se branche sur USB, fonctionne avec des piles fournis.",
+        "categiorie":["clavier", "souris", "ensemble"],
+        "image": "ensemble/Logitech.jpg",
+        "stock":4,
+        "price":44.95
+        },{
+        "nom":"Ensemble clavier, compact",
+        "description":"Grace a cette ensemble amener votre clavier et sourie partout avec vous. Se branche sur USB. Fonctionne avec des piles.",
+        "categiorie":["clavier", "souris", "ensemble"],
+        "image": "ensemble/Voyage.jpg",
+        "stock":2,
+        "price":49.95
+        },{
+        "nom":"Écran 4K",
+        "description":"Profitez de la haute définition avec cette écran 4K. Se branche sur HDMI ou Display port.",
+        "categiorie":["écran"],
+        "image": "ecran/4K.jpg",
+        "stock":3,
+        "price":159.95
+        },{
+        "nom":"Écran 21:9 gamer",
+        "description":"Jouer au format cinéma avec cette écran 21:9 165Hz 4K. Se branche sur HDMI ou Display port.",
+        "categiorie":["écran"],
+        "image": "ecran/21-9_gamer.jpg",
+        "stock":2,
+        "price":399.95
+        },{
+        "nom":"Écran Full hd",
+        "description":"Un écran pour tous usages en Full HD. Se branche sur HDMI ou Display port.",
+        "categiorie":["écran"],
+        "image": "ecran/Bureautique.jpg",
+        "stock":6,
+        "price":129.95
+        },{
+        "nom":"Écran externe",
+        "description":"Amener votre écran partour grace a cette écran externe. Se branche sur HDMI, Display port ou Type C.",
+        "categiorie":["écran"],
+        "image": "ecran/Externe.jpg",
+        "stock":3,
+        "price":249.95
+        },{
+        "nom":"Écran gamer",
+        "description":"Cette écran à 180Hz vous permettra de jouer avec une fluidité extrême. Se branche sur HDMI ou Display port.",
+        "categiorie":["écran"],
+        "image": "ecran/gamer.jpg",
+        "stock":2,
+        "price":209.95
+        },{
+        "nom":"Écran 25pouces 100Hz",
+        "description":"Cette écran vous permettra d'avoir une image fluide, antifatigue des yeux, vous pouvez rester des heures sur votre machine. Se branche sur HDMI ou Display port.",
+        "categiorie":["écran"],
+        "image": "ecran/Msi25P-1080p.jpg",
+        "stock":1,
+        "price":189.95
+        },{
+        "nom":"Casque filaire à isolation",
+        "description":"Ce casque vous permettra de jouer ou communiquer éfficassement, il dispose d'une bonne isolation afin de bien entendre votre(vos) interlocuteur(s). Se branche sur un port USB.",
+        "categiorie":["casque"],
+        "image": "casque/filaire-isolation.jpg",
+        "stock":5,
+        "price":59.95
+        },{
+        "nom":"Casque filaire avec commande",
+        "description":"Maitriser vos conversation d'un simple geste avec ce casque filaire. Se branche sur un port USB.",
+        "categiorie":["casque"],
+        "image": "casque/filaire-noir.jpg",
+        "stock":3,
+        "price":49.95
+        },{
+        "nom":"Casque filaire",
+        "description":"Parfait pour se parler à distance. Se branche sur un port USB.",
+        "categiorie":["casque"],
+        "image": "casque/filaire-noir.jpg",
+        "stock":6,
+        "price":29.95
+        },{
+        "nom":"Casque gamer",
+        "description":"Les joueurs vont s'amuser avec ce casque gamer RVB. Se branche sur USB.",
+        "categiorie":["casque"],
+        "image": "casque/gamming.jpg",
+        "stock":3,
+        "price":89.95
+        },{
+        "nom":"Casque sans fil",
+        "description":"Si vous détester avoir des fils partout, ce casque va vous permettre une utilisation partout sans l'encombrement des fils. Se branche sur USB, fonctionne avec uen batterie rechargeable.",
+        "categiorie":["casque"],
+        "image": "casque/sFil-normal.jpg",
+        "stock":6,
+        "price":49.95
+        },{
+        "nom":"Casque sans fil avec réducteur de bruit",
+        "description":"Ce casque vous permettra de jouer ou communiquer éfficassement, il dispose d'une isolation totale afin de bien entendre votre(vos) interlocuteur(s). Se branche sur un port USB. Fonctionne avec une batterie rechargeable.",
+        "categiorie":["casque"],
+        "image": "casque/sFil-reducteur.jpg",
+        "stock":3,
+        "price":149.95
+        },{
+        "nom":"Enseintes 2.1 Logitech",
+        "description":"Vivez une bonne expérience sonore grace a ces enseintes 2.1. Se branche sur un une prise jack 3,5mm.",
+        "categiorie":["son"],
+        "image": "son/2.1-logitech.jpg",
+        "stock":4,
+        "price":34.95
+        },{
+        "nom":"Enseintes 2.1 Logitech",
+        "description":"Vivez une bonne expérience sonore grace a ces enseintes 2.1. Se branche sur un une prise jack 3,5mm.",
+        "categiorie":["son"],
+        "image": "son/2.1-logitech.jpg",
+        "stock":4,
+        "price":34.95
         }
     ]
 }
