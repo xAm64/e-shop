@@ -1,236 +1,292 @@
-    /* variables ************************************************************************************************************************************************************************************/
-    
-    /* source https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-     :root {
-        /* principales / main */
-        --gazon: #BDE038;
-        --moutarde: #A3AB78;
-        --taupe: #818274;
-        --bleuVertAcier: #506266;
-        --vertMinuit: #10454F;
-        /* secondaires / secondary*/
-        --blancTilleul: #e0e7c8;
-        --rouge : #db4f2c;
-    }
+/* variables ************************************************************************************************************************************************************************************/
 
-    /* source https://www.w3schools.com/css/css3_fonts.asp */
-    @font-face {
-        font-family: FiraSans;
-        src: url(../fonts/FiraSans-Regular.ttf);
-    }
-    @font-face {
-        font-family: Cmu;
-        src: url(../fonts/cmu.ttf);
-    }
-    
-    #logoSite {
-        height: 60px;
-        margin: -20px 25px 0 0;
-    }
-    
-    #banner-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px;
-        ;
-    }
+/* source https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+    :root {
+    /* principales / main */
+    --gazon: #BDE038;
+    --moutarde: #A3AB78;
+    --taupe: #818274;
+    --bleuVertAcier: #506266;
+    --vertMinuit: #10454F;
+    /* secondaires / secondary*/
+    --blancTilleul: #e0e7c8;
+    --rouge : #db4f2c;
+}
 
-    .danger {
-        color: var(--rouge);
-        font-weight: 660;
-    }
-    
-    .search-bar input {
-        width: 300px;
-        height: 30px;
-        border: 1px solid var(--gazon);
-        color: var(--vertMinuit);
-        background-color: var(--blancTilleul);
-        border-radius: 9px;
-        padding: 0 6px;
-        font-family: Cmu;
-        font-size: 15px;
-    }
-    .search-bar input:focus {
-        outline: none;
-        border: 1px solid var(--moutarde);
-    }
-    
-    .user-login img {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .center {
-        text-align: center;
-    }
-    .titre {
-        text-align: center;
-        font-size: 35px;
-        font-family: FiraSans;
-        color: var(--bleuVertAcier);
-        letter-spacing: 4px;
-    }
-    /* général / general **************************************************************************************************************************************************************************/
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    html {
-        background-image: url("../images/fond.png");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    body {
-        background: rgba(224, 231, 200, 0.96);
-        opacity: 96%;
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    /* entête / header *****************************************************************************************************************************************************************************/
-    
-    header {
-        height: 130px;
-        background: var(--bleuVertAcier);
-        color: var(--gazon);
-        flex-shrink: 0;
-        border-radius: 0 0 6% 6%;
-        font-size: 20px;
-        font-family: FiraSans;
-    }
-    
-    header nav {
-        background-color: var(--taupe);
-        overflow: hidden;
-    }
-    
-    header nav ul li {
-        float: left;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    header nav ul li a {
-        display: block;
-        color: var(--blancTilleul);
-        text-align: center;
-        padding: 10px 16px;
-        text-decoration: none;
-    }
-    
-    header nav ul li a:hover {
-        color: var(--vertMinuit);
-    }
+/* source https://www.w3schools.com/css/css3_fonts.asp */
+@font-face {
+    font-family: FiraSans;
+    src: url(../fonts/FiraSans-Regular.ttf);
+}
+@font-face {
+    font-family: Cmu;
+    src: url(../fonts/cmu.ttf);
+}
 
-    #current-time {
-        margin-left: 40px;
-        text-align: right;
-    }
-    #navbar-login {
-        margin-right: 40px;
-        text-align: left;
-    }
+#logoSite {
+    height: 60px;
+    margin: -20px 25px 0 0;
+}
 
-    /* main************************************************************************************************************************************************************************************/
-    
-    main {
-        flex-grow: 1;
-        padding: 8px;
-        font-size: 18px;
-        font-family: Cmu;
-    }
-    /* footer ************************************************************************************************************************************************************************************/
-    
-    footer {
-        height: 60px;
-        background: var(--moutarde);
-        padding: 8px;
-        border-radius: 6% 6% 0 0;
-    }
-    
-    footer nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
-    
-    footer nav ul li {
-        margin: 0 10px;
-    }
-    
-    footer nav ul li a {
-        text-decoration: none;
-        color: var(--vertMinuit);
-    }
-    
-    footer nav ul li a:hover {
-        text-decoration: underline;
-    }
+#banner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    ;
+}
 
-    /* Éléments / elements **************************************************************************************************************************************************************************/
+.danger {
+    color: var(--rouge);
+    font-weight: 660;
+}
 
-    #produits {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin : 4px;
-        padding: 4px;
-    }
-    .card {
-        width: 300px;
-        margin: 10px;
-        padding: 10px;
-        border: 2px solid var(--gazon);
-        border-radius: 6px;
-        background-color: var(--blancTilleul);
-        opacity: 1;
-        color: var(--vertMinuit);
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .card .produit-image {
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .card h4 {
-        text-align: center;
-        color: var(--vertMinuit);
-        font-size: 25px;
-        letter-spacing: 2px;
-    }
-    .description {
-        text-align: justify;
-        font-size: 17px;
-        margin: 0 4px;
-    }
-    .category {
-        margin: 8px 3px 3px 3px;
-        text-align: center;
-        font-size: 14px;
-    }
-    .prix {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 550;
-    }
+.search-bar input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid var(--gazon);
+    color: var(--vertMinuit);
+    background-color: var(--blancTilleul);
+    border-radius: 9px;
+    padding: 0 6px;
+    font-family: Cmu;
+    font-size: 15px;
+}
+.search-bar input:focus {
+    outline: none;
+    border: 1px solid var(--moutarde);
+}
+
+.user-login img {
+    width: 25px;
+    height: 25px;
+}
+
+.center {
+    text-align: center;
+}
+.titre {
+    text-align: center;
+    font-size: 35px;
+    font-family: FiraSans;
+    color: var(--bleuVertAcier);
+    letter-spacing: 4px;
+}
+/* général / general **************************************************************************************************************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("../images/fond.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background: rgba(224, 231, 200, 0.96);
+    opacity: 96%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* entête / header *****************************************************************************************************************************************************************************/
+
+header {
+    height: 130px;
+    background: var(--bleuVertAcier);
+    color: var(--gazon);
+    flex-shrink: 0;
+    border-radius: 0 0 6% 6%;
+    font-size: 20px;
+    font-family: FiraSans;
+}
+
+header nav {
+    background-color: var(--taupe);
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    display: block;
+    color: var(--blancTilleul);
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: var(--vertMinuit);
+}
+
+#current-time {
+    margin-left: 40px;
+    text-align: right;
+}
+#navbar-login {
+    margin-right: 40px;
+    text-align: left;
+}
+
+/* main************************************************************************************************************************************************************************************/
+
+main {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 18px;
+    font-family: Cmu;
+}
+/* footer ************************************************************************************************************************************************************************************/
+
+footer {
+    height: 60px;
+    background: var(--moutarde);
+    padding: 8px;
+    border-radius: 6% 6% 0 0;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: var(--vertMinuit);
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Éléments / elements **************************************************************************************************************************************************************************/
+
+#produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin : 4px;
+    padding: 4px;
+}
+.card {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--gazon);
+    border-radius: 6px;
+    background-color: var(--blancTilleul);
+    opacity: 1;
+    color: var(--vertMinuit);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card .produit-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+}
+.card h4 {
+    text-align: center;
+    color: var(--vertMinuit);
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.description {
+    text-align: justify;
+    font-size: 17px;
+    margin: 0 4px;
+}
+.category {
+    margin: 8px 3px 3px 3px;
+    text-align: center;
+    font-size: 14px;
+}
+.prix {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+#details-produit {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    height: 600px;
+    width: 80%;
+    margin: 0 10%;
+    padding: 10px;
+    background-color: var(--blancTilleul);
+    opacity: 1;
+    border: 3px groove var(--gazon);
+    border-radius: 15px 19px;
+    display: none;
+}
+#details-produit .close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    cursor: pointer;
+    background-image: url("../images/close.svg");
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    border: 1px solid var(--vertMinuit);
+    border-radius: 8px;
+}
+
+#produit-long-description {
+    text-align: justify;
+    font-size: 20px;
+    font-family: Cmu;
+    color: var(--vertMinuit);
+}
+#image-produit {
+    text-align: center;
+}
+
+#interaction-produit {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+#add-panier {
+    background-image: url("../images/card.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    color: var(--gazon);
+    text-align: center;
+    font-size: 30px;
+}

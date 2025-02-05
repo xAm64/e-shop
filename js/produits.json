@@ -2,6 +2,7 @@
     {
     "nom":"clavier Thrust",
     "description":"Clavier est pour tout usages, avec pavé numérique. Se branche sur un port USB.",
+    "details":"Ce clavier Thrust est conçu pour une utilisation polyvalente.<br>Il dispose d'un pavé numérique intégré, idéal pour les tâches de saisie de données.<br>La connexion se fait via un port USB, assurant une compatibilité avec la plupart des ordinateurs. Sous Windows.",
     "categiorie":["clavier"],
     "image": "clavier/thrust.png",
     "stock":5,
@@ -9,6 +10,7 @@
     },{
     "nom":"clavier Logitech",
     "description":"Clavier avec des lettres aggrandit affin de facilité son utilisation dispose du pavé numérique. Se branche sur un port USB.",
+    "details":"Le clavier Logitech est équipé de touches agrandies pour une meilleure lisibilité et une utilisation facilitée.<br>Il comprend également un pavé numérique pour une saisie rapide des chiffres.<br>La connexion USB garantit une installation simple et rapide. Pour une utilisation sour Windows.",
     "categiorie":["clavier"],
     "image": "clavier/logitech.png",
     "stock":3,
@@ -16,6 +18,7 @@
     },{
     "nom":"Clavier Sans fil",
     "description":"Si avoir des fils est un cauchemer, ce clavier est fait pour vous. Se branche sur un port USB, fonctionne avec des piles AAA fournis.",
+    "details":"Ce clavier sans fil est parfait pour ceux qui détestent les câbles encombrants.<br>Il se connecte via un récepteur USB et fonctionne avec des piles AAA fournies.<br>Idéal pour une utilisation à distance et une installation propre. Fonctionne sour Windows.",
     "categiorie":["clavier"],
     "image": "clavier/Sans-fil.png",
     "stock":4,
@@ -23,6 +26,7 @@
     },{
     "nom":"clavier Gamer",
     "description":"Clavier avec rétroéclairage RVB, pour les gamers, et personnes utilisant l'ordinateur dans des milieux sombres. Se branche sur un port USB.",
+    "details":"Le clavier Gamer est doté d'un rétroéclairage RVB personnalisable, parfait pour les sessions de jeu nocturnes, avec ceci vous n'aurais plus aucune chance de vous tromper de touche.<br>Il offre une expérience de frappe réactive et confortable, avec une connexion USB pour une compatibilité universelle.",
     "categiorie":["clavier"],
     "image": "clavier/gamming.png",
     "stock":2,
@@ -30,6 +34,7 @@
     },{
     "nom":"Sourie droitier ergonomique",
     "description":"Cette sourie est parfaite pour tout usage, son ergonomie permet de l'utiliser longtemps. Se branche sur USB.",
+    "details":"Cette souris est idéale pour une utilisation quotidienne.<br>Avec son design ergonomique, vous pouvez l'utiliser longtemps sans avoir de douleurs.<br>Elle est équipée d'un capteur optique pour une précision de mouvement optimale.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/D-ergonomie.png",
     "stock":4,
@@ -37,6 +42,7 @@
     },{
     "nom":"Sourie droitier gammer RVB",
     "description":"Cette sourie RVB plaira a tout les gamers, elle est ergonomique et permet de jouer longtemps sans douleur. Se branche sur USB.",
+    "details":"Avec son look et ses fonctions RVB vous aller vous amuser pendant des heures et des heures, son design ergonomique vous permettra de jouer sans douleurs.<br>Elle est équipée d'un capteur optique pour une précision de mouvement optimale.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/D-gammer.png",
     "stock":2,
@@ -44,6 +50,7 @@
     },{
     "nom":"Sourie droitier Logitech",
     "description":"Cette sourie pas cher est parfait pour tous les usages. Se branche sur un port USB.",
+    "details":"Cette souris est idéale pour une utilisation quotidienne.<br>Elle est équipée d'un capteur optique pour une précision de mouvement optimale.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/D-logitech.png",
     "stock":7,
@@ -51,6 +58,7 @@
     },{
     "nom":"Sourie droitier sans fil",
     "description":"Vous n'aimez pas les fils, cette sourie est parfaite pour vous. Se branche sur un port USB, fonctionne avec une pile AA fournis.",
+    "details":"Si vous n'aimez pas les fils, cette souris est faite pour vous, elle fonctionne avec une pile AA fournis.<br>Elle est équipée d'un capteur optique pour une précision de mouvement optimale.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/D-Sfil.png",
     "stock":4,
@@ -58,6 +66,7 @@
     },{
     "nom":"Sourie droitier verticale",
     "description":"Cette sourie est parfaite pour tout usage sur du long terme, son ergonomie permet de l'utiliser longtemps. Se branche sur USB.",
+    "details":"Cette souris est consu pour un confort optimale, en tennant celle ci dans une position naturelle, vous pouvez travailler longtemps tout en gardant un confort.<br>Elle se branche sur un port USB ce qui garantie une compatibilité avec la plupart des ordinateurs. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/D-vertical.png",
     "stock":4,
@@ -65,6 +74,7 @@
     },{
     "nom":"Sourie gaucher verticale sans fil",
     "description":"Si vous êtes gaucher et détester les fils, cette sourie est faite pour vous. Se branche sur USB, fonctionne avec une pile AA fournis.",
+    "details":"Être gaucher n'est pas un problème avec cette souris.<br>Elle est conçu pour un confort optimale, en tennant celle ci dans une position naturelle.<br>Vous pouvez travailler longtemps tout en gardant un confort.<br>Elle fonctionne avec une pile AA fournis.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/G-vertical-Sfil.png",
     "stock":2,
@@ -72,6 +82,7 @@
     },{
     "nom":"Sourie gaucher ergonomique",
     "description":"Être gaucher n'est pas un problème avec cette sourie ergonomique. Se branche sur USB.",
+    "details":"Être gaucher n'est pas un problème avec cette souris.<br>Elle est conçu pour un confort optimale, en tennant celle ci dans une position naturelle, vous pouvez travailler longtemps tout en gardant un confort.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["souris"],
     "image": "souris/G-Vertical.png",
     "stock":2,
@@ -79,6 +90,7 @@
     },{
     "nom":"Ensemble clavier, souris ergonomique",
     "description":"Grace a cette ensemble ergonomique, vous pouvez utiliser votre ordinateur pendant des heures sans douleur. Se branche sur USB.",
+    "details":"Grace a cette ensemble, vous pouvez travailler confortablement pendant longtemps.<br>Il est idéal pour des travaux de bureautique et l'écriture de longue instance.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["clavier", "souris", "ensemble"],
     "image": "ensembles/ergonomique.png",
     "stock":3,
@@ -86,6 +98,7 @@
     },{
     "nom":"Ensemble clavier, souris gamer",
     "description":"Les joueurs vont s'amuser avec cette ensemble gamer. Se branche sur USB.",
+    "details":"Cette ensemble vous permettra de jouer et de vous amuser pendant longtemps, il est idéal pour les jeux en ligne et les jeux solo.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["clavier", "souris", "ensemble"],
     "image": "ensembles/gammer.png",
     "stock":2,
@@ -93,6 +106,7 @@
     },{
     "nom":"Ensemble clavier, souris Logitech",
     "description":"Cette enseble vous permettra de travailler ou jouer sans problème. Se branche sur USB.",
+    "details":"Cette ensemble est partait pour les petits budgets et un usage régulier de l'ordinateur.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.",
     "categiorie":["clavier", "souris", "ensemble"],
     "image": "ensembles/Logitech-fil.png",
     "stock":7,
@@ -100,6 +114,7 @@
     },{
     "nom":"Ensemble clavier, souris Logitech sans fil",
     "description":"Vous n'aimez pas les fils, pas de souci, cette ensemble est fait pour vous. Se branche sur USB, fonctionne avec des piles fournis.",
+    "details":"Si les fils de l'ordinateur est un cauchemar!<br>Cette ensemble vous en débarassera, pour une utilisation propre et sans encombrement ils fonctionnent même à distance.<br>La connexion USB garantit une installation simple et rapide. Sous Windows.<br>Fonctionnent avec des piles AA pour la souris et AAA pour le clavier.",
     "categiorie":["clavier", "souris", "ensemble"],
     "image": "ensembles/Logitech.png",
     "stock":4,
@@ -107,6 +122,7 @@
     },{
     "nom":"Ensemble clavier, compact",
     "description":"Grace a cette ensemble amener votre clavier et sourie partout avec vous. Se branche sur USB. Fonctionne avec des piles.",
+    "details":"Avec ce kit, vous pouvez voyager partout avec votre clavier et votre souris, ils sont compacts et fonctionnent avec des piles.<br>La connexion USB garantit une installation simple et rapide. Sous Windows. Fonctionnent avec des piles AA pour la souris et AAA pour le clavier.",
     "categiorie":["clavier", "souris", "ensemble"],
     "image": "ensembles/Voyage.png",
     "stock":2,
@@ -114,6 +130,7 @@
     },{
     "nom":"Écran 4K",
     "description":"Profitez de la haute définition avec cette écran 4K. Se branche sur HDMI ou Display port.",
+    "details":"Cet écran 4K offre une résolution ultra-haute définition<br>Idéale pour les professionnels de la création, les gamers et les amateurs de cinéma.<br>Avec des couleurs vives et des détails précis, il transforme votre expérience visuelle.<br>Il se connecte facilement via HDMI ou DisplayPort, assurant une compatibilité avec la plupart des appareils modernes.",
     "categiorie":["écran"],
     "image": "ecrans/4K.png",
     "stock":3,
@@ -121,6 +138,7 @@
     },{
     "nom":"Écran 21:9 gamer",
     "description":"Jouer au format cinéma avec cette écran 21:9 165Hz 4K. Se branche sur HDMI ou Display port.",
+    "details":"Plongez dans l'action avec cet écran 21:9 conçu pour les gamers et regarder vos films au format cinéma.<br>Avec une résolution 4K de largeur et 2K de hauteur et un taux de rafraîchissement de 165Hz, il offre une expérience de jeu fluide et immersive.<br>Le format ultra-large 21:9 est parfait pour les jeux et les films, offrant un champ de vision élargi.<br>Connectez-le facilement via HDMI ou DisplayPort.",
     "categiorie":["écran"],
     "image": "ecrans/21-9_gamer.png",
     "stock":2,
@@ -128,6 +146,7 @@
     },{
     "nom":"Écran Full hd",
     "description":"Un écran pour tous usages en Full HD. Se branche sur HDMI ou Display port.",
+    "details":"Cet écran Full HD est parfait pour une utilisation quotidienne, que ce soit pour le travail, les études ou le divertissement.<br>Avec une résolution de 1920x1080, il offre des images claires et nettes.<br>Il se connecte facilement via HDMI ou DisplayPort, assurant une compatibilité avec une large gamme d'appareils.",
     "categiorie":["écran"],
     "image": "ecrans/Bureautique.png",
     "stock":6,
@@ -135,6 +154,7 @@
     },{
     "nom":"Écran externe",
     "description":"Amener votre écran partour grace a cette écran externe. Se branche sur HDMI, Display port ou Type C.",
+    "details":"Cet écran externe est idéal pour les professionnels en déplacement.<br>Léger et portable, il se connecte facilement via HDMI, DisplayPort ou USB Type-C.<br>Parfait pour les présentations, le travail à distance ou comme écran secondaire, il offre une flexibilité maximale.",
     "categiorie":["écran"],
     "image": "ecrans/Externe.png",
     "stock":3,
@@ -142,6 +162,7 @@
     },{
     "nom":"Écran gamer",
     "description":"Cette écran à 180Hz vous permettra de jouer avec une fluidité extrême. Se branche sur HDMI ou Display port.",
+    "details":"Cet écran gamer offre un taux de rafraîchissement de 180Hz, garantissant une fluidité exceptionnelle pour les jeux rapides.<br>Avec une résolution Full HD, il offre des images claires et nettes.<br>Il se connecte facilement via HDMI ou DisplayPort, assurant une compatibilité avec la plupart des appareils modernes.",
     "categiorie":["écran"],
     "image": "ecrans/gamer.png",
     "stock":2,
@@ -149,6 +170,7 @@
     },{
     "nom":"Écran 25pouces 100Hz",
     "description":"Cette écran vous permettra d'avoir une image fluide, antifatigue des yeux, vous pouvez rester des heures sur votre machine. Se branche sur HDMI ou Display port.",
+    "details":"Cet écran de 25 pouces avec un taux de rafraîchissement de 100Hz est conçu pour offrir une expérience visuelle fluide et confortable.<br>La technologie antifatigue des yeux permet de travailler ou de jouer pendant des heures sans inconfort.<br>Il se connecte facilement via HDMI ou DisplayPort, assurant une compatibilité avec une large gamme d'appareils.",
     "categiorie":["écran"],
     "image": "ecrans/Msi25P-1080p.png",
     "stock":1,
@@ -156,6 +178,7 @@
     },{
     "nom":"Casque filaire à isolation",
     "description":"Ce casque vous permettra de jouer ou communiquer éfficassement, il dispose d'une bonne isolation afin de bien entendre votre(vos) interlocuteur(s). Se branche sur un port USB.",
+    "details":"Ce casque filaire à isolation est parfait pour les environnements bruyants.<br>Il offre une excellente qualité sonore et une isolation acoustique efficace pour vous permettre de vous concentrer sur votre jeu ou vos conversations.<br>La connexion USB garantit une installation simple et rapide.",
     "categiorie":["casque"],
     "image": "casque/filaire-isolation.png",
     "stock":5,
@@ -163,6 +186,7 @@
     },{
     "nom":"Casque filaire avec commande",
     "description":"Maitriser vos conversation d'un simple geste avec ce casque filaire. Se branche sur un port USB.",
+    "details":"Ce casque filaire avec commande vous permet de contrôler facilement le volume et les appels sans avoir à toucher votre appareil.<br>Il offre une qualité sonore claire et nette, idéale pour les appels et les jeux.<br>La connexion USB garantit une installation simple et rapide.",
     "categiorie":["casque"],
     "image": "casque/filaire-noir.png",
     "stock":3,
@@ -170,6 +194,7 @@
     },{
     "nom":"Casque filaire",
     "description":"Parfait pour se parler à distance. Se branche sur un port USB.",
+    "details":"Ce casque filaire est idéal pour les conversations à distance et les jeux.<br>Il offre une qualité sonore claire et une connexion stable via USB.<br>Léger et confortable, il est parfait pour une utilisation prolongée.",
     "categiorie":["casque"],
     "image": "casque/filaire-noir.png",
     "stock":6,
@@ -177,6 +202,7 @@
     },{
     "nom":"Casque gamer",
     "description":"Les joueurs vont s'amuser avec ce casque gamer RVB. Se branche sur USB.",
+    "details":"Ce casque gamer RVB est conçu pour les joueurs.<br>Il offre un son immersif et des effets lumineux personnalisables pour une expérience de jeu améliorée.<br>La connexion USB garantit une installation simple et rapide.",
     "categiorie":["casque"],
     "image": "casque/gamming.png",
     "stock":3,
@@ -184,6 +210,7 @@
     },{
     "nom":"Casque sans fil",
     "description":"Si vous détester avoir des fils partout, ce casque va vous permettre une utilisation partout sans l'encombrement des fils. Se branche sur USB, fonctionne avec uen batterie rechargeable.",
+    "details":"Ce casque sans fil est parfait pour ceux qui détestent les câbles encombrants.<br>Il offre une liberté de mouvement totale grâce à sa connexion sans fil et fonctionne avec une batterie rechargeable.<br>La connexion USB garantit une installation simple et rapide.",
     "categiorie":["casque"],
     "image": "casque/sFil-normal.png",
     "stock":6,
@@ -191,6 +218,7 @@
     },{
     "nom":"Casque sans fil avec réducteur de bruit",
     "description":"Ce casque vous permettra de jouer ou communiquer éfficassement, il dispose d'une isolation totale afin de bien entendre votre(vos) interlocuteur(s). Se branche sur un port USB. Fonctionne avec une batterie rechargeable.",
+    "details":"Ce casque sans fil avec réducteur de bruit est idéal pour les environnements bruyants.<br>Il offre une isolation acoustique totale pour vous permettre de vous concentrer sur votre jeu ou vos conversations.<br>La connexion USB garantit une installation simple et rapide et il fonctionne avec une batterie rechargeable.",
     "categiorie":["casque"],
     "image": "casque/sFil-reducteur.png",
     "stock":3,
@@ -198,6 +226,7 @@
     },{
     "nom":"Enseintes 2.1 Orow",
     "description":"Avec leur look agressif, vivez une expérience en jeu. Se branche sur un une prise jack 3,5mm.",
+    "details":"Ces enseintes sont consu pour offrir une immersion parfaite.<br>Avec leur look agressif, vous aurez une forte motication dans vos jeux.<br>Elles se branchent sur une prise jack 3,5mm.",
     "categiorie":["son"],
     "image": "son/2.1-orow.png",
     "stock":3,
@@ -205,20 +234,23 @@
     },{
     "nom":"Enseintes 2.1 Logitech",
     "description":"Vivez une bonne expérience sonore grace a ces enseintes 2.1. Se branche sur un une prise jack 3,5mm.",
+    "details":"Profitez d'une excellente qualité sonore avec ces enceintes 2.1 Logitech.<br>Idéales pour une utilisation quotidienne, elles se branchent sur une prise jack 3,5 mm, offrant une installation simple et rapide.",
     "categiorie":["son"],
     "image": "son/2.1-logitech.png",
     "stock":4,
     "price":34.95
     },{
     "nom":"Enseintes 7.1",
-    "description":"Grace à ce kit, vivez une immersion totale dans vos jeux, films, séries. Se branche sur plusieurs prises jack 3,5mm.",
+    "description":"Vivez une immersion totale avec ce kit d'enceintes 7.1. Parfait pour les jeux, les films et les séries, il se branche sur plusieurs prises jack 3,5 mm pour une expérience sonore surround complète.",
+    "details":"grace a ce kit vivez vos expérience comme si vous y étiez au cinéma.<br>Les 7 hauts parlerurs permettent d'avoir un son surround.<br>Que ce soit pour vos usages quotidiens, les films, les jeux, ce kit vous offrira un réel plaisir.<br>Se branche sur plusieurs prises jack 3,5 mm pour une expérience sonore surround complète.",
     "categiorie":["son"],
     "image": "son/7.1.png",
     "stock":3,
     "price":449.95
     },{
     "nom":"Enseintes Logitech",
-    "description":"Idéal pour une utilisation courante du PC, ces enseintes prennent peu de place grace à leur design compact. Se branche sur un une prise jack 3,5mm.",
+    "description":"Ces enceintes Logitech sont idéales pour une utilisation courante du PC. Leur design compact permet de gagner de la place sur votre bureau. Elles se branchent sur une prise jack 3,5 mm, assurant une installation facile.",
+    "details":"Ces enseintes sont excéllente pour un usage quotidien, leur petite taille n'encombrera pas vos bureau.<br>Elles se branchent sur une prise jack 3,5 mm, assurant une installation facile.",
     "categiorie":["son"],
     "image": "son/logitech.png",
     "stock":7,
@@ -226,6 +258,7 @@
     },{
     "nom":"Enseintes RVB",
     "description":"Compléter votre game de jeux grace a ces enseintes. Se branche sur un une prise jack 3,5mm.",
+    "details":"Complétez votre setup de jeu avec ces enceintes RVB.<br>Elles offrent une qualité sonore exceptionnelle et des effets lumineux personnalisables.<br>Se branchent sur une prise jack 3,5 mm pour une compatibilité universelle.",
     "categiorie":["son"],
     "image": "son/RVB.png",
     "stock":4,
@@ -233,6 +266,7 @@
     },{
     "nom":"Enseintes Thrust",
     "description":"Idéal pour une utilisation courante du PC, Se branche sur un une prise jack 3,5mm.",
+    "details":"Idéales pour une utilisation quotidienne, ces enceintes Thrust se branchent sur une prise jack 3,5 mm.<br>Elles offrent une qualité sonore claire et nette, parfaite pour le travail ou le divertissement.",
     "categiorie":["son"],
     "image": "son/Thrust.png",
     "stock":8,

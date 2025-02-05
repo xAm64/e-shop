@@ -33,6 +33,17 @@ function displayProducts(data) {
             <div class="produit-image" style="background-image: url('../images/produits/${product.image}')"></div>
             <p class="prix">${product.price} €</p>
         `;
+        productCard.addEventListener('click', () => showProductDetails(product));
         productsContainer.appendChild(productCard);
     });
+}
+
+/*afficher les détails quand je clic sur un produit */
+function showProductDetails(product){
+    let detailsContainer = document.getElementById("details-produit");
+    detailsContainer.querySelector("h2").textContent = `Détails de : ${product.nom}`;
+    detailsContainer.querySelector("#produit-long-description").innerHTML = `<p>${product.details}</p>`;
+    detailsContainer.querySelector("#image-produit img").src = `../images/produits/${product.image}`;
+    detailsContainer.querySelector("#prix-produit").textContent = `Prix : ${product.price} €`;
+    detailsContainer.style.display = "block";
 }
