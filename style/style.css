@@ -234,17 +234,18 @@ footer nav ul li a:hover {
 
 #details-produit {
     position: fixed;
-    top: 150px;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 600px;
     width: 80%;
-    margin: 0 10%;
     padding: 10px;
     background-color: var(--blancTilleul);
     opacity: 1;
     border: 3px groove var(--gazon);
-    border-radius: 15px 19px;
+    border-radius: 20px;
     display: none;
+    z-index: 100;
 }
 #details-produit .close {
     position: absolute;
