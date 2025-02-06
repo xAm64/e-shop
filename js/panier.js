@@ -80,3 +80,31 @@ function addToCart(product) {
     alert(`${product.nom} a été ajouté au panier`);
     displayCart();
 }
+function acheter(valeur){
+    const fenetrePaiement = document.getElementById("paiement");
+    const fenetreValiderPanier = document.getElementById("total-commande");
+    if (valeur){
+        fenetrePaiement.style.display = "block";
+        fenetreValiderPanier.style.display = "none";
+    } else {
+        fenetrePaiement.style.display = "none";
+        fenetreValiderPanier.style.display = "block";
+    }
+}
+
+function paiement(accept) {
+    if (accept == true) {
+        alert("Merci d'avoir complété la simulation de commande ! Nous espérons que vous avez apprécié l'expérience.");
+        clearCartAndForm();
+    } else {
+        alert("Votre demande d'annulation a bien été prise en compte !");
+        clearCartAndForm();
+    }
+}
+
+function clearCartAndForm() {
+    panier = [];
+    localStorage.setItem("panier", JSON.stringify(panier));
+    displayCart();
+    document.querySelectorAll('#paiement form input').forEach(input => input.value = '');
+}

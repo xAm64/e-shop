@@ -443,6 +443,7 @@ footer nav ul li a:hover {
     border: 3px groove var(--gazon);
     border-radius: 20px;
     z-index: 100;
+    display: none;
 }
 
 #paiement h4 {
@@ -453,7 +454,7 @@ footer nav ul li a:hover {
     letter-spacing: 4px;
 }
 #paiement form label{
-    font-size: 20px;
+    font-size: 16px;
     font-family: FiraSans;
     color: var(--bleuVertAcier);
 }
@@ -467,4 +468,15 @@ footer nav ul li a:hover {
     padding: 0 6px;
     font-family: Cmu;
     font-size: 15px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.group-vertical {
+    display: flex;
+    flex-direction: column;
 }
