@@ -62,20 +62,3 @@ function addToCart(product){
     localStorage.setItem("panier", JSON.stringify(panier));
     alert(`${product.nom} a été ajouté au panier`);
 }
-
-function displayCart(){
-    const cartContainer = document.getElementById("caroussel-panier");
-    cartContainer.innerHTML = "";
-    panier.forEach(product => {
-        const productCard = document.createElement("div");
-        productCard.className = "card";
-        productCard.innerHTML = `
-            <h4>${product.nom}</h4>
-            <div class="produit-image" style="background-image: url('images/produits/${product.image}')"></div>
-            <p class="prix"><span class="gauche">Prix unitaire:</span><span class="droit">${product.price} €</span></p>
-            <p class="quantite">Quantité: 1</p>
-            <p class="total"><span class="gauche">Total :</span><span class="droit">${product.price} €</span></p>
-        `;
-        cartContainer.appendChild(productCard);
-    });
-}

@@ -341,35 +341,55 @@ footer nav ul li a:hover {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-#caroussel-panier .card .quantite {
+#caroussel-panier table {
+    width: 100%;
+    border: 2px solid var(--moutarde);
+    border-collapse: collapse;
+}
+#caroussel-panier td {
+    border: 1px solid var(--bleuVertAcier);
+    padding: 5px;
+    color: var(--bleuVertAcier);
+}
+#caroussel-panier td:first-child {
+    width: 60%;
+}
+#caroussel-panier .panier-quantite {
     text-align: center;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
-#caroussel-panier .card .quantite::before {
-    background-image: url("../images/moins.svg");
-}
-#caroussel-panier .card .quantite::after {
+
+#caroussel-panier .plus {
     background-image: url("../images/plus.svg");
 }
-#caroussel-panier .card .quantite::before,
-#caroussel-panier .card .quantite::after {
-    content: "";
+
+#caroussel-panier .moins {
+    background-image: url("../images/moins.svg");
+}
+#caroussel-panier .plus,
+#caroussel-panier .moins {
+    width: 25px;
+    height: 25px;
+    margin: 0 8px;
+    border: none;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
+    background-color: transparent;
     cursor: pointer;
-    margin: 0 10px;
 }
-#caroussel-panier .card .prix,
-#caroussel-panier .card .total {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+#panier-vide {
+    text-align: center;
+    font-size: 25px;
+    font-family: FiraSans;
+    letter-spacing: 4px;
+    background-image: url("../images/panier-vide.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    width: auto;
 }
