@@ -393,3 +393,28 @@ footer nav ul li a:hover {
     min-height: 60vh;
     width: auto;
 }
+
+#total-commande {
+    position: fixed;
+    bottom: 60px;
+    max-width: 1280px;
+    margin: 0 -8px;
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--taupe);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+#total-commande button {
+    border-radius: 6px;
+    border: 1px solid var(--bleuVertAcier);
+    background-color: var(--gazon);
+    height: 35px;
+    padding: 5px;
+    width: 130px;
+    font-size: 20px;
+    cursor: pointer;
+}
