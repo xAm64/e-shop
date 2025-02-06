@@ -13,6 +13,12 @@ function updateTime() {
 setInterval(updateTime, 15000);
 updateTime();
 
+/* Mettre à jour le compteur du panier */
+function updateCartCount() {
+    const cartCount = panier.reduce((total, product) => total + (product.quantity || 1), 0);
+    document.getElementById('cart-count').textContent = cartCount;
+}
+
 /* charger les produits */
 async function loadProducts() {
     try {
@@ -24,6 +30,7 @@ async function loadProducts() {
         if (window.location.pathname.includes("panier.html")){
             displayCart();
         }
+        updateCartCount();
     } catch (error) {
         console.error('Erreur lors du chargement des produits:', error);
     }
@@ -58,7 +65,19 @@ function showProductDetails(product){
 
 /* ajouter un produit au panier */
 function addToCart(product){
-    panier.push(product);
+    const existingProduct = panier.find(p => p.nom === product.nom);
+    if (existingProduct) {
+        if (existingProduct.quantity < product.stock) {
+            existingProduct.quantity += 1;
+        } else {
+            alert("Vous ne pouvez pas ajouter plus de produits que le stock disponible.");
+        }
+    } else {
+        product.quantity = 1;
+        panier.push(product);
+    }
     localStorage.setItem("panier", JSON.stringify(panier));
     alert(`${product.nom} a été ajouté au panier`);
+    document.getElementById("details-produit").style.display = "none";
+    updateCartCount();
 }

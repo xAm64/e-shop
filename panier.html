@@ -18,7 +18,11 @@
                 </li>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="produits.html">Produits</a></li>
-                <li><a href="#" class="curent-page" onclick="alert(`Vous êtes déjà sur la page de votre panier`)">Panier</a></li>
+                <li>
+                    <a href="#" class="curent-page" onclick="alert(`Vous êtes déjà sur la page de votre panier`)">
+                        Panier <span id="cart-count">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div id="banner-header">
@@ -39,7 +43,7 @@
             </div>
         </div>
         <div id="total-commande">
-            <div>Total à payer : XXXX,yy €</div>
+            <div>Total à payer : <span class="leger-gras">XXXX,yy</span> €</div>
             <button>Acheter</button>
         </div>
     </main>
