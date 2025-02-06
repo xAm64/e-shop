@@ -40,6 +40,24 @@
     color: var(--rouge);
     font-weight: 660;
 }
+.btn {
+    cursor:pointer;
+    height: 35px;
+    width: 130px;
+    border-radius: 8px;
+    border: 1px solid var(--taupe);
+    font-size: 22px;
+    padding: 5px;
+}
+.bt-success {
+    background-color: var(--gazon);
+    color: var(--vertMinuit);
+}
+.bt-danger {
+    background-color: var(--rouge);
+    color: var(--blancTilleul);
+}
+
 
 .search-bar input {
     width: 300px;
@@ -411,13 +429,42 @@ footer nav ul li a:hover {
     padding: 10px;
     border-radius: 10px;
 }
-#total-commande button {
-    border-radius: 6px;
-    border: 1px solid var(--bleuVertAcier);
-    background-color: var(--gazon);
-    height: 35px;
-    padding: 5px;
-    width: 130px;
+/* Paiement / pay */
+#paiement {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 80%;
+    padding: 10px;
+    background-color: var(--blancTilleul);
+    opacity: 1;
+    border: 3px groove var(--gazon);
+    border-radius: 20px;
+    z-index: 100;
+}
+
+#paiement h4 {
+    text-align: center;
+    font-size: 30px;
+    font-family: FiraSans;
+    color: var(--bleuVertAcier);
+    letter-spacing: 4px;
+}
+#paiement form label{
     font-size: 20px;
-    cursor: pointer;
+    font-family: FiraSans;
+    color: var(--bleuVertAcier);
+}
+#paiement form input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid var(--taupe);
+    color: var(--vertMinuit);
+    background-color: var(--blancTilleul);
+    border-radius: 9px;
+    padding: 0 6px;
+    font-family: Cmu;
+    font-size: 15px;
 }

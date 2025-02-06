@@ -44,7 +44,41 @@
         </div>
         <div id="total-commande">
             <div>Total à payer : <span class="leger-gras">XXXX,yy</span> €</div>
-            <button>Acheter</button>
+            <button class="btn bt-success">Acheter</button>
+        </div>
+        <div id="paiement">
+            <h4>Adresse</h4>
+            <form>
+                <label for="nom">Nom<span class="danger">*</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Smith" required>
+                <label for="prenom">Prénom<span class="danger">*</span></label>
+                <input type="text" id="prenom" name="prenom" placeholder="John" required>
+                <br>
+                <label for="adresse">Adresse<span class="danger">*</span></label>
+                <input type="text" id="adresse" name="adresse" placeholder="1 rue de Paris" required>
+                <label for="complement">Complément</label>
+                <input type="text" id="complement" name="complement" placeholder="Appartement 123">
+                <br>
+                <label for="code-portal">Code postal<span class="danger">*</span></label>
+                <input type="text" id="code-portal" name="code-portal" placeholder="75000" required>
+                <label for="ville">Ville<span class="danger">*</span></label>
+                <input type="text" id="ville" name="ville" placeholder="Paris" required>
+            </form>
+            <h4>Paiement</h4>
+            <form>
+                <label for="type-carte">Nom du titulaire de la carte<span class="danger">*</span></label>
+                <input type="text" id="type-carte" name="type-carte" placeholder="John Smith" required>
+                <label for="NumeroCarte">Numero de carte<span class="danger">*</span></label>
+                <input type="text" id="NumeroCarte" name="NumeroCarte" placeholder="1234 5678 1234 5678" required>
+                <label for="date-expiration">Date d'expiration<span class="danger">*</span></label>
+                <input type="text" id="date-expiration" name="date-expiration" placeholder="MM/AA" required>
+                <label for="code-securite">Code de sécurité<span class="danger">*</span></label>
+                <input type="text" id="code-securite" name="code-securite" placeholder="123" required>
+            </form>
+            <div id="transaction">
+                <button class="btn bt-success">Payer</button>
+                <button class="btn bt-danger">Annuler</button>
+            </div>
         </div>
     </main>
     <footer>
