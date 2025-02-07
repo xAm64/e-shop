@@ -166,6 +166,7 @@ function activerPaiement(){
     let listIdentifiants = ["email", "facturation-nom", "facturation-prenom", "facturation-adresse", "facturation-code-portal", "facturation-ville", "cb-titulaire", "cb-numero", "cb-expire", "cb-code"];
     let listLivraison = ["livraison-nom", "livraison-prenom", "livraison-adresse", "livraison-code-portal", "livraison-ville"];
     const checkboxLivraisonDifferente = document.getElementById("facturation-is-diferent");
+    const conditions = document.getElementById("conditions-utilisations");
     for (let i=0; i<listIdentifiants.length; i++){
         if (!verifEtat(listIdentifiants[i])){
             etat = false;
@@ -177,6 +178,10 @@ function activerPaiement(){
                 etat = false;
             }
         }
+    }
+    if (!conditions.checked){
+        etat = false;
+        document.getElementById("label-conditions").style = "color: #db4f2c";
     }
     return etat;
 }
