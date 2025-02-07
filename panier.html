@@ -36,76 +36,110 @@
         </div>
     </header>
     <main>
+        <!-- Affichage du panier -->
         <h2 class="titre">Mon panier</h2>
         <div id="caroussel-panier">
             <div id="panier-vide">
                 Votre panier est vide.
             </div>
         </div>
+        <!-- Affichage du total quand il y a au moins 1 article -->
         <div id="total-commande">
             <div>Total à payer : <span class="leger-gras">Vous n'avez rien acheter</span> €</div>
-            <button class="btn bt-success">Acheter</button>
+            <button class="btn bt-success" onclick="acheter(true);">Acheter</button>
         </div>
+        <!-- Fenêtre de la commande et du paiement -->
         <div id="paiement">
-            <h4>Adresse</h4>
-            <form>
-                <div class="container">
+            <h4>Paiement et livraison</h4>
+            <!-- si l'adresse de facturation et de livraison sont différentes -->
+            <div class="container">
+                <label for="facturation-is-diferent">L'adresse de laivraison est différente de l'adresse de facturation.</label>
+                <input type="checkbox" id="facturation-is-diferent" onclick="toggleDeliveryAddress()">
+            </div>
+            <div class="container">
+                <form>
                     <div class="group-vertical">
-                        <label for="nom">Nom<span class="danger">*</span></label>
-                        <input type="text" id="nom" name="nom" placeholder="Smith" required>
+                        <label for="email">E-mail<span class="danger">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="monmail@mail.com" value="" required>
                     </div>
-                    <div class="group-vertical">
-                        <label for="prenom">Prénom<span class="danger">*</span></label>
-                        <input type="text" id="prenom" name="prenom" placeholder="John" required>
+                </form>
+            </div>
+            <!-- cadre de saisie de(s) adresse(s) -->
+            <div class="container">
+                <!-- Si on facture et livre au même endroit -->
+                <form>
+                    <h5 id="adresse-factur">Adresse de facturation et de livraison</h5>
+                    <div class="container">
+                        <div class="group-vertical">
+                            <label for="nom">Nom<span class="danger">*</span></label>
+                            <input type="text" id="facturation-nom" name="facturation-nom" placeholder="Smith" value="" required>
+                        </div>
+                        <div class="group-vertical">
+                            <label for="prenom">Prénom<span class="danger">*</span></label>
+                            <input type="text" id="facturation-prenom" name="facturation-prenom" placeholder="John" value="" required>
+                        </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="group-vertical">
-                        <label for="adresse">Adresse<span class="danger">*</span></label>
-                        <input type="text" id="adresse" name="adresse" placeholder="1 rue de Paris" required>
+                    <div class="container">
+                        <div class="group-vertical">
+                            <label for="adresse">Adresse<span class="danger">*</span></label>
+                            <input type="text" id="facturation-adresse" name="facturation-adresse" placeholder="1 rue de Paris" value="" required>
+                        </div>
+                        <div class="group-vertical">
+                            <label for="complement">Complément</label>
+                            <input type="text" id="facturation-complement" name="facturation-complement" placeholder="Appartement 123" value="">
+                        </div>
                     </div>
-                    <div class="group-vertical">
-                        <label for="complement">Complément</label>
-                        <input type="text" id="complement" name="complement" placeholder="Appartement 123">
+                    <div class="container">
+                        <div class="group-vertical">
+                            <label for="code-portal">Code postal<span class="danger">*</span></label>
+                            <input type="text" id="facturation-code-portal" name="facturation-code-portal" placeholder="75000" value="" pattern="pattern="[0-9]{5}"" required>
+                        </div>
+                        <div class="group-vertical">
+                            <label for="ville">Ville<span class="danger">*</span></label>
+                            <input type="text" id="facturation-ville" name="facturation-ville" placeholder="Paris" required>
+                        </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="group-vertical">
-                        <label for="code-portal">Code postal<span class="danger">*</span></label>
-                        <input type="text" id="code-portal" name="code-portal" placeholder="75000" required>
-                    </div>
-                    <div class="group-vertical">
-                        <label for="ville">Ville<span class="danger">*</span></label>
-                        <input type="text" id="ville" name="ville" placeholder="Paris" required>
-                    </div>
-                </div>
-            </form>
+                </form>
+                <!-- si on facture a X et livre à Y on saisie l'adresse de livraison ici -->
+                <form id="adresse-livraison">
+                    
+                </form>
+            </div>
+            <!-- On saisie ici les coordonnées de paiement -->
             <h4>Paiement</h4>
             <form>
                 <div class="container">
                     <div class="group-vertical">
                         <label for="type-carte">Nom du titulaire de la carte<span class="danger">*</span></label>
-                        <input type="text" id="type-carte" name="type-carte" placeholder="John Smith" required>
+                        <input type="text" id="cb-titulaire" name="cb-titulaire" placeholder="John Smith" required>
                     </div>
                 </div>
                 <div class="container">
                     <div class="group-vertical">
                         <label for="NumeroCarte">Numero de carte<span class="danger">*</span></label>
-                        <input type="text" id="NumeroCarte" name="NumeroCarte" placeholder="1234 5678 1234 5678" required>
+                        <input type="text" id="cb-numero" name="cb-numero" placeholder="1234 5678 1234 5678" required>
                     </div>
                 </div>
                 <div class="container">
                     <div class="group-vertical">
                         <label for="date-expiration">Date d'expiration<span class="danger">*</span></label>
-                        <input type="text" id="date-expiration" name="date-expiration" placeholder="MM/AA" required>
+                        <input type="text" id="cb-expire" name="cb-expire" placeholder="MM/AA" required>
                     </div>
                     <div class="group-vertical">
                         <label for="code-securite">Code de sécurité<span class="danger">*</span></label>
-                        <input type="text" id="code-securite" name="code-securite" placeholder="123" required>
+                        <input type="text" id="cb-code" name="cb-code" placeholder="123" required>
                     </div>
                 </div>
             </form>
             <br>
+            <!-- la case qui nous protège avec les conditions d'utilisations -->
+            <div class="container">
+                <div class="vertical-align">
+                    <label for="conditions-utilisation">J'accèpte les <a href="#">conditions d'utilisations et de paiement</a><span class="danger">*</span></label>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <!-- l'utilisateur est livbre de payer ou annuler -->
             <div class="container">
                 <button class="btn bt-success" onclick="paiement(true);">Payer</button>
                 <button class="btn bt-danger" onclick="paiement(false);">Annuler</button>

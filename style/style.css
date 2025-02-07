@@ -435,7 +435,7 @@ footer nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 600px;
+    height: 700px;
     width: 80%;
     padding: 10px;
     background-color: var(--blancTilleul);
@@ -452,6 +452,7 @@ footer nav ul li a:hover {
     font-family: FiraSans;
     color: var(--bleuVertAcier);
     letter-spacing: 4px;
+    margin: 0;
 }
 #paiement form label{
     font-size: 16px;
@@ -469,7 +470,32 @@ footer nav ul li a:hover {
     font-family: Cmu;
     font-size: 15px;
 }
-
+#paiement input[type="checkbox"]{
+    position: relative;
+    cursor: pointer;
+}
+#paiement input[type="checkbox"]:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -3px;
+    left: 0;
+    border: 1px solid var(--taupe);
+    border-radius: 4px;
+    background-color: var(--blancTilleul);
+}
+#paiement input[type="checkbox"]:checked:after{
+    content: "✅";
+    display: block;
+    top: -3px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--taupe);
+    background-color: var(--gazon);
+    position: absolute;
+}
 .container {
     display: flex;
     gap: 20px;
@@ -479,4 +505,12 @@ footer nav ul li a:hover {
 .group-vertical {
     display: flex;
     flex-direction: column;
+}
+#adresse-livraison {
+    display: none;
+}
+#paiement form h5 {
+    font-size: 18px;
+    font-family: FiraSans;
+    letter-spacing: 2px;
 }
