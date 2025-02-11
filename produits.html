@@ -10,14 +10,14 @@
 
 <body>
     <noscript>JavaScript est désactivé, l'application ne fonctionnera pas sans.</noscript>
-    <header>
+    <header id="header">
         <nav>
             <ul>
                 <li>
                     <a href="#"><img id="logoSite" src="images/logo.svg"></a>
                 </li>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#" class="curent-page" onclick="alert(`Vous êtes déjà sur la page des produits`)">Produits</a></li>
+                <li><a href="#" class="curent-page">Produits</a></li>
                 <li><a href="panier.html">Panier <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
@@ -45,7 +45,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="center">©Max Thirioux 2025 - <span id="get-current-year">2025</span></div>
         <nav>
             <ul>
@@ -54,6 +54,11 @@
             </ul>
         </nav>
     </footer>
+    <script src="js/contennu.js"></script>
+    <script>
+        afficheHeader();
+        afficheFooter();
+    </script>
     <script src="js/scripts.js "></script>
     <script>document.addEventListener('DOMContentLoaded', loadProducts);</script>
 </body>

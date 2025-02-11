@@ -10,22 +10,22 @@
 
 <body>
     <noscript>JavaScript est désactivé, l'application ne fonctionnera pas sans.</noscript>
-    <header>
+    <header id="header">
         <nav>
             <ul>
                 <li>
                     <a href="#"><img id="logoSite" src="images/logo.svg"></a>
                 </li>
-                <li><a href="#" class="curent-page" onclick="alert(`Vous êtes déjà sur la page d'accueil`)">Accueil</a></li>
-                <li><a href="produits.html">Produits</a></li>
-                <li><a href="panier.html">Panier</a></li>
+                <li><a href="#" class="curent-page">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Panier</a></li>
             </ul>
         </nav>
         <div id="banner-header">
             <div id="current-time">00:00</div>
             <div class="search-bar"><input type="researsh" placeholder="Rechercher un produit ici"></div>
             <div class="user-login" id="navbar-login">
-                <a href="#">
+                <a href="#" onclick="alert(`Cette option n'est pas disponible, car ce site n'est qu'une démonstration`);">
                     <img src=" images/user.svg " alt="Utilisateur ">
                 </a>
             </div>
@@ -51,15 +51,20 @@
         </p>
         <p>Merci de votre compréhension.</p>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="center">©Max Thirioux 2025 - <span id="get-current-year">2025</span></div>
         <nav>
             <ul>
-                <li><a href=" # ">Mentions légales</a></li>
-                <li><a href="# ">Nous contacter</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Nous contacter</a></li>
             </ul>
         </nav>
     </footer>
-    <script src="js/scripts.js "></script>
+    <script src="js/contennu.js"></script>
+    <script>
+        afficheHeader();
+        afficheFooter();
+    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

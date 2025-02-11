@@ -10,7 +10,7 @@
 
 <body>
     <noscript>JavaScript est désactivé, l'application ne fonctionnera pas sans.</noscript>
-    <header>
+    <header id="header">
         <nav>
             <ul>
                 <li>
@@ -18,11 +18,7 @@
                 </li>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="produits.html">Produits</a></li>
-                <li>
-                    <a href="#" class="curent-page" onclick="alert(`Vous êtes déjà sur la page de votre panier`)">
-                        Panier <span id="cart-count">0</span>
-                    </a>
-                </li>
+                <li><a href="#" class="curent-page">Panier <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
         <div id="banner-header">
@@ -135,7 +131,7 @@
             <!-- la case qui nous protège avec les conditions d'utilisations -->
             <div class="container">
                 <div class="vertical-align">
-                    <label for="conditions-utilisation" id="label-conditions">J'accèpte les <a href="#">conditions d'utilisations et de paiement</a><span class="danger">*</span></label>
+                    <label for="conditions-utilisation" id="label-conditions">J'accèpte les <a href="conditions.html"  target="_blank">conditions d'utilisations et de paiement</a><span class="danger">*</span></label>
                     <input type="checkbox" id="conditions-utilisations" required>
                 </div>
             </div>
@@ -146,7 +142,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="center">©Max Thirioux 2025 - <span id="get-current-year">2025</span></div>
         <nav>
             <ul>
@@ -155,6 +151,11 @@
             </ul>
         </nav>
     </footer>
+    <script src="js/contennu.js"></script>
+    <script>
+        afficheHeader();
+        afficheFooter();
+    </script>
     <script src="js/scripts.js "></script>
     <script src="js/panier.js"></script>
     <script>document.addEventListener('DOMContentLoaded', loadProducts);</script>
