@@ -185,13 +185,3 @@ function activerPaiement(){
     }
     return etat;
 }
-
-function verifEtat(id){
-    if (document.getElementById(id).value != ""){
-        document.getElementById(id).style = "border: 1px solid #818274";
-        return true;
-    }else{
-        document.getElementById(id).style = "border: 1px solid #db4f2c";
-        return false;
-    }
-}

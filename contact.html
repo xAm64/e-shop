@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>E-shop > Contact</title>
+</head>
+
+<body>
+    <noscript>JavaScript est désactivé, l'application ne fonctionnera pas sans.</noscript>
+    <header id="header">
+    </header>
+    <main>
+        <h2 class="danger">Me contacter</h2>
+        <form id="contactez-moi">
+            <div class="container">
+                <div class="group-vertical">
+                    <label for="contact-nom">Nom<span class="danger">*</span></label>
+                    <input type="text" name="contact-nom" id="contact-nom" placeholder="Smith" value="" required>
+                </div>
+                <div class="group-vertical">
+                    <label for="contact-prenom">Prénom<span class="danger">*</span></label>
+                    <input type="text" name="contact-prenom" id="contact-prenom" placeholder="Will" value="" required>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="group-vertical">
+                    <label for="contact-email">E-mail<span class="danger">*</span></label>
+                    <input type="email" name="contact-email" id="contact-email" placeholder="mon@email.com" value="" required>
+                </div>
+                <div class="group-vertical">
+                    <label for="contact-objet">Objet<span class="danger">*</span></label>
+                    <input type="text" name="contact-objet" id="contact-objet" placeholder="Demande d'entretien" value="" required>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="group-vertical">
+                    <label for="contact-message">Message<span class="danger">*</span></label>
+                    <textarea name="contact-message" id="contact-message" rows="10" placeholder="Bonjour Max, je suis intéressé par votre profil. Seriez-vous disponible pour un échange ?" value=""></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <button class="btn bt-success" onclick="verifierContact();">Envoyer</button>
+            </div>
+        </form>
+        <p><u>Information importante:</u> pour me contacter, veuillez utiliser l'adresse email fournie sur mon CV. Ce formulaire n'enverra pas de message.</p>
+    </main>
+    <footer id="footer">
+    </footer>
+    <script src="js/contennu.js"></script>
+    <script>
+        afficheHeader();
+        afficheFooter();
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

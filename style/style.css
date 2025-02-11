@@ -122,6 +122,27 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* Barre de défilement prersonalisé / Custom Scrollbar ***************************************************************************************************************************************/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--taupe);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--gazon);
+    border-radius: 10px;
+    border: 3px solid var(--taupe);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--moutarde);
+}
+
 /* entête / header *****************************************************************************************************************************************************************************/
 
 header {
@@ -454,11 +475,13 @@ footer nav ul li a:hover {
     letter-spacing: 4px;
     margin: 0;
 }
+#contactez-moi label,
 #paiement form label{
     font-size: 16px;
     font-family: FiraSans;
     color: var(--bleuVertAcier);
 }
+#contactez-moi input,
 #paiement form input {
     width: 300px;
     height: 30px;
@@ -513,4 +536,15 @@ footer nav ul li a:hover {
     font-size: 18px;
     font-family: FiraSans;
     letter-spacing: 2px;
+}
+
+#contactez-moi textarea {
+    width: 620px;
+    background-color: var(--blancTilleul);
+    border: 1px solid var(--taupe);
+    color: var(--vertMinuit);
+    border-radius: 8px;
+    padding: 5px;
+    font-family: Cmu;
+    font-size: 16px;
 }

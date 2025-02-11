@@ -81,3 +81,32 @@ function addToCart(product){
     document.getElementById("details-produit").style.display = "none";
     updateCartCount();
 }
+
+/* vérifier si une case obligatoire est remplit */
+function verifEtat(id){
+    if (document.getElementById(id).value != ""){
+        document.getElementById(id).style = "border: 1px solid #818274";
+        return true;
+    }else{
+        document.getElementById(id).style = "border: 1px solid #db4f2c";
+        return false;
+    }
+}
+
+/* vérifier contact */
+function verifierContact(){
+    let idFormulaire = ["contact-nom", "contact-prenom", "contact-email", "contact-objet", "contact-message"];
+    let statut = true;
+    for (let i = 0; i < idFormulaire.length; i++){
+        if (!verifEtat.idFormulaire[i]){
+            statut = false;
+        }
+    }
+    if (statut){
+        alert(`Merci pour votre message.
+            Afin de me contacter, veuillez utilser l'adresse email ci joint avec mon CV.
+            Pour des raisons de sécurité, ce site n'envoie pas d'email.`);
+    } else {
+        alert(`Certains champs obligatoires ne sont pas remplis, veuillez les remplir avant de cliquer sur envoyer`);
+    }
+}

@@ -20,7 +20,7 @@ function afficheHeader(){
                 contenu += 'Produits</a></li>'+
                 '<li>';
                     if (window.location.pathname.includes("panier.html")){
-                        contenue += '<a href=#" class="current-page" onclick="alert(`Vous êtes déjà sur votre panier`);">';
+                        contenu += '<a href="#" class="current-page" onclick="alert(`Vous êtes déjà sur la page du panier`);">';
                     } else {
                         contenu += '<a href="panier.html">';
                     }
@@ -46,8 +46,8 @@ function afficheFooter(){
         '<div class="center">©Max Thirioux 2025 - <span id="get-current-year">2025</span></div>'+
         '<nav>'+
             '<ul>'+
-                '<li><a href="#">Mentions légales</a></li>'+
-                '<li><a href="#">Nous contacter</a></li>'+
+                '<li><a href="conditions.html" target="_blanc">Conditions d\'utilisation</a></li>'+
+                '<li><a href="contact.html">Me contacter</a></li>'+
             '</ul>'+
         '</nav>';
     footer.innerHTML = contenu;
