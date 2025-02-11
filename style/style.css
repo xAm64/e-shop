@@ -475,12 +475,14 @@ footer nav ul li a:hover {
     letter-spacing: 4px;
     margin: 0;
 }
+#user-connexion form label,
 #contactez-moi label,
 #paiement form label{
     font-size: 16px;
     font-family: FiraSans;
     color: var(--bleuVertAcier);
 }
+#user-connexion form input,
 #contactez-moi input,
 #paiement form input {
     width: 300px;
@@ -547,4 +549,26 @@ footer nav ul li a:hover {
     padding: 5px;
     font-family: Cmu;
     font-size: 16px;
+}
+
+#suggestion-passwords {
+    font-family: Cmu;
+    font-size: 16px;
+    color: var(--vertMinuit);
+}
+#suggestion-passwords li {
+    list-style: none
+}
+#suggestion-passwords li::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/arrow-right.svg");
+    background-position: center;
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+#user-connexion form {
+    width: 50%;
 }

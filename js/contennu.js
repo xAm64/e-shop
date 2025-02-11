@@ -31,7 +31,7 @@ function afficheHeader(){
             '<div id="current-time">00:00</div>'+
             '<div class="search-bar"><input type="researsh" placeholder="Prochainement disponible"></div>'+
             '<div class="user-login" id="navbar-login">'+
-                '<a href="#" onclick="alert(`Prochainnement disponible`);">'+
+                '<a href="connexion.html">'+
                     '<img src=" images/user.svg " alt="Utilisateur ">'+
                 '</a>'+
             '</div>'+

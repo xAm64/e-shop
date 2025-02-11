@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>E-shop > Connexion</title>
+</head>
+
+<body>
+    <noscript>JavaScript est désactivé, l'application ne fonctionnera pas sans.</noscript>
+    <header id="header">
+    </header>
+    <main>
+        <h2 class="danger">Compte</h2>
+        <div id="user-connexion">
+            <div class="container">
+                <form>
+                    <div class="group-vertical">
+                        <h4>J'ai déjà un compte</h4>
+                        <label for="connexion-email">Email<span class="danger">*</span></label>
+                        <input type="email" name="conexion-email" id="conexion-email" placeholder="mon@email.com" value="" required>
+                        <br>
+                        <label for="connexion-password">Mot de passe<span class="danger">*</span></label>
+                        <input type="password" name="connexion-password" id="connexion-password" placeholder="random password" value="" required>
+                        <br>
+                        <a href="#">J'ai oublié mon mot de passe</a>
+                        <br>
+                        <button class="btn bt-success">Connexion</button>
+                    </div>
+                </form>
+                <form>
+                    <div class="group-vertical">
+                        <h4>Je n'ai pas de compte</h4>
+                        <label for="inscription-email">Email<span class="danger">*</span></label>
+                        <input type="email" name=inscription-email" id=inscription-email" placeholder="mon@email.com" value="" required>
+                        <br>
+                        <div id="zone-passwords">
+                            
+                        </div>
+                        <br>
+                        <button class="btn bt-success">M'inscrire</button>
+                        <br>
+                        <p>Pas d'idée!<br>
+                        Voici des suggestions de mot de passes aléatoires et sécurisés</p>
+                        <div id="suggestion-passwords">
+                        </div>
+                        <p>Attention, il est recommandé d'enregistrer le votre dans un gestionnaire de mot de passes comme <a href="https://keepass.info/">Keepass</a><br>
+                        Les mots pass ici changeront a chaques fois que vous rafraichisses la pages et sont généré de façon totalement aléatoire.</p>
+                    </div>
+                </form>
+            </div>
+            <br>
+        </div>
+    </main>
+    <footer id="footer">
+    </footer>
+    <script src="js/contennu.js"></script>
+    <script>
+        afficheHeader();
+        afficheFooter();
+    </script>
+    <script src="js/scripts.js"></script>
+    <script>genererHtmlMotPasse();</script>
+</body>
+</html>
