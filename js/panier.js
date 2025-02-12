@@ -50,7 +50,7 @@ function increaseQuantity(index, stock) {
         localStorage.setItem("panier", JSON.stringify(panier));
         displayCart();
     } else {
-        alert("Vous ne pouvez pas ajouter plus de produits que le stock disponible.");
+        errMessage("Vous ne pouvez pas ajouter plus de produits que le stock disponible.", false);
     }
 }
 
@@ -70,14 +70,14 @@ function addToCart(product) {
         if (existingProduct.quantity < product.stock) {
             existingProduct.quantity += 1;
         } else {
-            alert("Vous ne pouvez pas ajouter plus de produits que le stock disponible.");
+            errMessage("Vous ne pouvez pas ajouter plus de produits que le stock disponible.", false);
         }
     } else {
         product.quantity = 1;
         panier.push(product);
     }
     localStorage.setItem("panier", JSON.stringify(panier));
-    alert(`${product.nom} a été ajouté au panier`);
+    errMessage(`${product.nom} a été ajouté au panier`, true);
     displayCart();
 }
 function acheter(valeur){
@@ -95,13 +95,13 @@ function acheter(valeur){
 function paiement(accept) {
     if (accept == true) {
         if (activerPaiement()){
-            alert("Merci d'avoir complété la simulation de commande ! Nous espérons que vous avez apprécié l'expérience.");
+            errMessage("Merci d'avoir complété la simulation de commande ! Nous espérons que vous avez apprécié l'expérience.", true);
             clearCartAndForm();
         } else {
-            alert("Veuillez remplir les champs obligatoires manquants avant de valider votre commande !");
+            errMessage("Veuillez remplir les champs obligatoires manquants avant de valider votre commande !", false);
         }
     } else {
-        alert("Votre demande d'annulation a bien été prise en compte !");
+        errMessage("Votre demande d'annulation a bien été prise en compte !", true);
         clearCartAndForm();
     }
 }

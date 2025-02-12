@@ -1,4 +1,8 @@
 var panier = JSON.parse(localStorage.getItem("panier")) || []; //J'utilise ici var car il porte partout.
+var compte = {
+    "email" : "",
+    "pass" : ""
+}
 
 /*met heure en temps réel toutes les 15 secondes. */
 function updateTime() {
@@ -63,6 +67,21 @@ function showProductDetails(product){
     detailsContainer.style.display = "block";
 }
 
+/* génère le message d'erreur compréhensible par l'utilisateur */
+function errMessage(message, type){
+    const zone = document.getElementById("err-message");
+    zone.innerText = message;
+    zone.style.display = "block";
+    if (type){
+        zone.style.color = "#A3AB78";
+    } else {
+        zone.style.color = "#db4f2c";
+    }
+    setTimeout (function(){
+        zone.style.display = "none";
+    }, 120000);
+}
+
 /* ajouter un produit au panier */
 function addToCart(product){
     const existingProduct = panier.find(p => p.nom === product.nom);
@@ -70,7 +89,7 @@ function addToCart(product){
         if (existingProduct.quantity < product.stock) {
             existingProduct.quantity += 1;
         } else {
-            alert("Vous ne pouvez pas ajouter plus de produits que le stock disponible.");
+            errMessage("Vous ne pouvez pas ajouter plus de produits que le stock disponible.", false);
         }
     } else {
         product.quantity = 1;
@@ -103,11 +122,11 @@ function verifierContact(){
         }
     }
     if (statut){
-        alert(`Merci pour votre message.
-            Afin de me contacter, veuillez utilser l'adresse email ci joint avec mon CV.
-            Pour des raisons de sécurité, ce site n'envoie pas d'email.`);
+        errMessage(`Merci pour votre message.<br>
+            Afin de me contacter, veuillez utilser l'adresse email ci joint avec mon CV.<br>
+            Pour des raisons de sécurité, ce site n'envoie pas d'email.`, true);
     } else {
-        alert(`Certains champs obligatoires ne sont pas remplis, veuillez les remplir avant de cliquer sur envoyer`);
+        errMessage(`Certains champs obligatoires ne sont pas remplis, veuillez les remplir avant de cliquer sur envoyer`, false);
     }
 }
 
@@ -122,21 +141,50 @@ function gereateRandomPassword(){
     }
     return pass;
 }
-function genererHtmlMotPasse(){
-    let pass = gereateRandomPassword();
-    document.getElementById("zone-passwords").innerHTML =
-        '<div class="group-vertical">'+
-        '<label for="inscription-password">Mot de passe<span class="danger">*</span></label>'+
-        '<input type="password" name="inscription-password" id="inscription-password" placeholder="'+pass+'" value="" required>'+
-        '<label for="inscription-password-confirm">Confirmer votre mot de passe<span class="danger">*</span></label>'+
-        '<input type="password" name="inscription-password-confirm" id="inscription-password-confirm" placeholder="'+pass+'" value="" required></input>'+
-        '</div>';
 
-    let htmlSuggest = '<ul>';
-    for (let i = 0; i < 5 ; i++){
-        htmlSuggest += '<li>'+gereateRandomPassword()+'</li>';
+/* créer un compte */
+function créerCompte(){
+    let elements = ["inscription-email", "inscription-password", "inscription-password-confirm"],
+        status = true;
+    for (let i = 0; i < elements.length; i++){
+        if (!verifEtat(elements[i])){
+            status = false;
+        }
     }
-    htmlSuggest += '</ul>';
-    document.getElementById("suggestion-passwords").innerHTML = htmlSuggest;
+    if (status){
+        if (document.getElementById("inscription-password").value === document.getElementById("inscription-password-confirm").value){
+            compte.email = document.getElementById("inscription-email").value;
+            compte.pass = document.getElementById("inscription-password").value;
+        } else {
+            document.getElementById("inscription-password").style = "border: 1px solid #db4f2c";
+            document.getElementById("inscription-password-confirm").style = "border: 1px solid #db4f2c";
+            errMessage("Les mot de passes ne sont pas identiques !", false);
+        }
+    } else {
+        errMessage("Veuillez remplir les éléments obligatoires pour pouvoir créer votre compte", false);
+    }
 }
+/* se connecter */
+function connexion(){
+    let elements = ["conexion-email", "connexion-password"],
+        status = true;
+    for (let i = 0; i < elements.length; i++){
+        if (!verifEtat(elements[i])){
+            status = false;
+        }
+    }
 
+    if (status){
+        if (compte.email != "" && compte.pass != ""){
+            if ((document.getElementById(`conexion-email`).value == compte.email) && (document.getElementById(`connexion-password`).value == compte.pass)){
+                errMessage("Bientôt vous pourrez vous connecter", true);
+            } else {
+                errMessage(`L'adresse email et/ou le mot de passe sont incorrect`, false);
+            }
+        } else {
+            errMessage(`Vous n'avez pas de compte !`, false);
+        }
+    } else {
+        errMessage(`Veuillez remplir les chams obligatoires`, false);
+    }
+}

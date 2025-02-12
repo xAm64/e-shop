@@ -143,6 +143,14 @@ body {
     background-color: var(--moutarde);
 }
 
+#err-message {
+    font-size: 21px;
+    text-align: center;
+    font-family: Cmu;
+    letter-spacing: 1px;
+    display: none;
+}
+
 /* entête / header *****************************************************************************************************************************************************************************/
 
 header {
@@ -569,6 +577,24 @@ footer nav ul li a:hover {
     height: 12px;
     margin-right: 5px;
 }
+#user-connexion h4{
+    font-family: FiraSans;
+    letter-spacing: 2px;
+    color: var(--bleuVertAcier);
+    font-size: 20px;
+}
 #user-connexion form {
     width: 50%;
+    padding: 0 5px;
+}
+
+#user-connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#user-connexion button {
+    min-width: 200px;
+    margin: 0 auto;
 }

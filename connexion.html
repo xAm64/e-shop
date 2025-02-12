@@ -13,7 +13,8 @@
     <header id="header">
     </header>
     <main>
-        <h2 class="danger">Compte</h2>
+        <h2 class="danger center">Compte</h2>
+        <div id="err-message"></div>
         <div id="user-connexion">
             <div class="container">
                 <form>
@@ -27,31 +28,30 @@
                         <br>
                         <a href="#">J'ai oublié mon mot de passe</a>
                         <br>
-                        <button class="btn bt-success">Connexion</button>
+                        <button class="btn bt-success" onclick="connexion();">Connexion</button>
                     </div>
                 </form>
                 <form>
                     <div class="group-vertical">
                         <h4>Je n'ai pas de compte</h4>
                         <label for="inscription-email">Email<span class="danger">*</span></label>
-                        <input type="email" name=inscription-email" id=inscription-email" placeholder="mon@email.com" value="" required>
+                        <input type="email" name="inscription-email" id="inscription-email" placeholder="mon@email.com" value="" required>
                         <br>
                         <div id="zone-passwords">
                             
                         </div>
                         <br>
-                        <button class="btn bt-success">M'inscrire</button>
-                        <br>
-                        <p>Pas d'idée!<br>
-                        Voici des suggestions de mot de passes aléatoires et sécurisés</p>
-                        <div id="suggestion-passwords">
-                        </div>
-                        <p>Attention, il est recommandé d'enregistrer le votre dans un gestionnaire de mot de passes comme <a href="https://keepass.info/">Keepass</a><br>
-                        Les mots pass ici changeront a chaques fois que vous rafraichisses la pages et sont généré de façon totalement aléatoire.</p>
+                        <button class="btn bt-success" onclick="créerCompte();">M'inscrire</button>
                     </div>
                 </form>
             </div>
             <br>
+            <p>Pas d'idée!<br>
+                Voici des suggestions de mot de passes aléatoires et sécurisés</p>
+                <div id="suggestion-passwords">
+                </div>
+                <p>Attention, il est recommandé d'enregistrer le votre dans un gestionnaire de mot de passes comme <a href="https://keepass.info/">Keepass</a><br>
+                Les mots pass ici changeront a chaques fois que vous rafraichisses la pages et sont généré de façon totalement aléatoire.</p>
         </div>
     </main>
     <footer id="footer">

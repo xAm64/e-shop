@@ -52,3 +52,21 @@ function afficheFooter(){
         '</nav>';
     footer.innerHTML = contenu;
 }
+
+function genererHtmlMotPasse(){
+    let pass = gereateRandomPassword();
+    document.getElementById("zone-passwords").innerHTML =
+        '<div class="group-vertical">'+
+        '<label for="inscription-password">Mot de passe<span class="danger">*</span></label>'+
+        '<input type="password" name="inscription-password" id="inscription-password" placeholder="'+pass+'" value="" required>'+
+        '<label for="inscription-password-confirm">Reécrivez, votre mot de passe<span class="danger">*</span></label>'+
+        '<input type="password" name="inscription-password-confirm" id="inscription-password-confirm" placeholder="'+pass+'" value="" required></input>'+
+        '</div>';
+
+    let htmlSuggest = '<ul>';
+    for (let i = 0; i < 5 ; i++){
+        htmlSuggest += '<li>'+gereateRandomPassword()+'</li>';
+    }
+    htmlSuggest += '</ul>';
+    document.getElementById("suggestion-passwords").innerHTML = htmlSuggest;
+}
