@@ -17,21 +17,21 @@
         <div id="err-message"></div>
         <div id="user-connexion">
             <div class="container">
-                <form>
+                <form onsubmit="connexion(event);">
                     <div class="group-vertical">
                         <h4>J'ai déjà un compte</h4>
                         <label for="connexion-email">Email<span class="danger">*</span></label>
-                        <input type="email" name="conexion-email" id="conexion-email" placeholder="mon@email.com" value="" required>
+                        <input type="email" name="connexion-email" id="connexion-email" placeholder="mon@email.com" value="" required>
                         <br>
                         <label for="connexion-password">Mot de passe<span class="danger">*</span></label>
                         <input type="password" name="connexion-password" id="connexion-password" placeholder="random password" value="" required>
                         <br>
                         <a href="#">J'ai oublié mon mot de passe</a>
                         <br>
-                        <button class="btn bt-success" onclick="connexion();">Connexion</button>
+                        <input type="submit" class="btn bt-success" value="Connexion">
                     </div>
                 </form>
-                <form>
+                <form onsubmit="créerCompte(event);">
                     <div class="group-vertical">
                         <h4>Je n'ai pas de compte</h4>
                         <label for="inscription-email">Email<span class="danger">*</span></label>
@@ -41,7 +41,7 @@
                             
                         </div>
                         <br>
-                        <button class="btn bt-success" onclick="créerCompte();">M'inscrire</button>
+                        <input type="submit" value="M'inscrire" class="btn bt-success">
                     </div>
                 </form>
             </div>

@@ -587,14 +587,16 @@ footer nav ul li a:hover {
     width: 50%;
     padding: 0 5px;
 }
+#user-connexion form input[type="submit"]{
+    width: 200px;
+    margin: 0 auto;
+    background-color: var(--gazon);
+    color: var(--bleuVertAcier);
+}
 
 #user-connexion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-#user-connexion button {
-    min-width: 200px;
-    margin: 0 auto;
 }
