@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>E-shop > Connexion</title>
+    <title>E-shop > Utilisateur</title>
 </head>
 
 <body>
@@ -14,6 +14,7 @@
     </header>
     <main>
         <h2 class="danger center">Compte</h2>
+        <p class="center" id="message-securité">Pour des raisons de sécurités, n'utilisez pas un mot de passe de tous les jours sur ce site.<button onclick="fermerMessageSecurite();">❌</button></p>
         <div id="err-message"></div>
         <div id="user-connexion">
             <div class="container">
@@ -24,11 +25,12 @@
                         <input type="email" name="connexion-email" id="connexion-email" placeholder="mon@email.com" value="" required>
                         <br>
                         <label for="connexion-password">Mot de passe<span class="danger">*</span></label>
-                        <input type="password" name="connexion-password" id="connexion-password" placeholder="random password" value="" required>
+                        <input type="password" name="connexion-password" id="connexion-password" placeholder="Moi seul le sait" value="" required>
                         <br>
                         <a href="#">J'ai oublié mon mot de passe</a>
                         <br>
                         <input type="submit" class="btn bt-success" value="Connexion">
+                        <p>En cliquant sur connexion, vous aurez un cookie d'authentification stocké dans votre navigateur</p>
                     </div>
                 </form>
                 <form onsubmit="créerCompte(event);">
@@ -50,8 +52,6 @@
                 Voici des suggestions de mot de passes aléatoires et sécurisés</p>
                 <div id="suggestion-passwords">
                 </div>
-                <p>Attention, il est recommandé d'enregistrer le votre dans un gestionnaire de mot de passes comme <a href="https://keepass.info/">Keepass</a><br>
-                Les mots pass ici changeront a chaques fois que vous rafraichisses la pages et sont généré de façon totalement aléatoire.</p>
         </div>
     </main>
     <footer id="footer">

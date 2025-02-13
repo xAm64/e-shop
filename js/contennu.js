@@ -31,7 +31,7 @@ function afficheHeader(){
             '<div id="current-time">00:00</div>'+
             '<div class="search-bar"><input type="researsh" placeholder="Prochainement disponible"></div>'+
             '<div class="user-login" id="navbar-login">'+
-                '<a href="connexion.html">'+
+                '<a href="#" onclick="suisJeConnecte();">'+
                     '<img src=" images/user.svg " alt="Utilisateur ">'+
                 '</a>'+
             '</div>'+
@@ -69,4 +69,35 @@ function genererHtmlMotPasse(){
     }
     htmlSuggest += '</ul>';
     document.getElementById("suggestion-passwords").innerHTML = htmlSuggest;
+}
+
+function afficherCompte(){
+    let savedCompte = JSON.parse(localStorage.getItem("compte"));
+    let navToken = readCookie();
+    if (navToken != "" && savedCompte.token == navToken){
+        document.getElementById("gestion-compte").innerHTML = `
+        <h2 class="danger center">Gérér mon compte</h2>
+        <div id="err-message"></div>
+        <div class="container">
+            <div class="w50">
+                <h4 class="center">Changer mon mot de passe</h4>
+                <form>
+                        <div class="group-vertical">
+                        <label for="nouveau-pass">Nouveau mot de passe<span class="danger">*</span></label>
+                        <input type="password" name="nouveau-pass" id="nouveau-pass" value="" required>
+                        <label for="confirm-nouveau-pass">Réecrivez le<span class="danger">*</span></label>
+                        <input type="password" name="confirm-nouveau-pass" id="confirm-nouveau-pass" value="" required>
+                        <br>
+                        <input type="submit" value="Changer" class="btn bt-success" onclick="changePassword();">
+                    </div>
+                </form>
+            </div>
+            <div class="w50">
+                <h4 class="danger center">Supprimmer mon compte</h4>
+                <button class="btn bt-danger" id="suppr-compte" onclick="deleteCompte();">Supprimmer</button>
+            </div>
+        </div>`;
+    } else {
+        window.location.replace("connexion.html");
+    }
 }

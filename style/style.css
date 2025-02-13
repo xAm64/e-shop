@@ -37,7 +37,7 @@
 }
 
 .danger {
-    color: var(--rouge);
+    color: var(--rouge) !important;
     font-weight: 660;
 }
 .btn {
@@ -99,6 +99,19 @@
 .leger-gras {
     font-weight: 650;
 }
+.w50 {
+    width: 50%;
+}
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.group-vertical {
+    display: flex;
+    flex-direction: column;
+}
 /* général / general **************************************************************************************************************************************************************************/
 
 * {
@@ -114,13 +127,13 @@ html {
 }
 
 body {
-    background: rgba(224, 231, 200, 0.96);
-    opacity: 96%;
+    background: rgba(224, 231, 200, 0.97);
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    z-index: 0;
 }
 
 /* Barre de défilement prersonalisé / Custom Scrollbar ***************************************************************************************************************************************/
@@ -483,6 +496,7 @@ footer nav ul li a:hover {
     letter-spacing: 4px;
     margin: 0;
 }
+#gestion-compte form label,
 #user-connexion form label,
 #contactez-moi label,
 #paiement form label{
@@ -490,6 +504,7 @@ footer nav ul li a:hover {
     font-family: FiraSans;
     color: var(--bleuVertAcier);
 }
+#gestion-compte form input,
 #user-connexion form input,
 #contactez-moi input,
 #paiement form input {
@@ -529,16 +544,7 @@ footer nav ul li a:hover {
     background-color: var(--gazon);
     position: absolute;
 }
-.container {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-.group-vertical {
-    display: flex;
-    flex-direction: column;
-}
+
 #adresse-livraison {
     display: none;
 }
@@ -547,6 +553,8 @@ footer nav ul li a:hover {
     font-family: FiraSans;
     letter-spacing: 2px;
 }
+
+/* contact *****************************************************************************************************************************************/
 
 #contactez-moi textarea {
     width: 620px;
@@ -558,7 +566,7 @@ footer nav ul li a:hover {
     font-family: Cmu;
     font-size: 16px;
 }
-
+/* créer compte / create account *****************************************************************************************************************/
 #suggestion-passwords {
     font-family: Cmu;
     font-size: 16px;
@@ -593,10 +601,33 @@ footer nav ul li a:hover {
     background-color: var(--gazon);
     color: var(--bleuVertAcier);
 }
-
+#suppr-compte,
+#gestion-compte form,
 #user-connexion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+#message-securité button {
+    border: 1px solid var(--rouge);
+    margin: 0 0 0 10px;
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* gérer compte / manage account *****************************************************************************************************/
+#gestion-compte h4 {
+    color: var(--bleuVertAcier);
+    font-size: 19px;
+    font-family: FiraSans;
+    letter-spacing: 1px;
+}
+
+#suppr-compte {
+    width: 200px;
+    margin: 0 auto;
+}
+
