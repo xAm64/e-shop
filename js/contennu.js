@@ -28,9 +28,19 @@ function afficheHeader(){
             '</ul>'+
         '</nav>'+
         '<div id="banner-header">'+
-            '<div id="current-time">00:00</div>'+
-            '<div class="search-bar"><input type="researsh" placeholder="Prochainement disponible"></div>'+
-            '<div class="user-login" id="navbar-login">'+
+            '<div id="current-time">00:00</div>';
+            if (window.location.pathname.includes("produits.html")){
+                contenu += 
+                '<div class="search-bar">'+
+                    '<input type="text" id="search-input" placeholder="Rechercher un produit ici" oninput="searchProducts()">'+
+                '</div>';
+            } else {
+                contenu += 
+                '<div class="search-bar">'+
+                    '<input type="text" id="recherche-non-disponible" placeholder="Disponible sur la page des produits" readonly>'+
+                '</div>';
+            }
+            contenu += '<div class="user-login" id="navbar-login">'+
                 '<a href="#" onclick="suisJeConnecte();">'+
                     '<img src=" images/user.svg " alt="Utilisateur ">'+
                 '</a>'+

@@ -5,6 +5,8 @@ var compte = {
     "token": ""
 }
 
+let allProducts = [];
+
 /*met heure en temps réel toutes les 15 secondes. */
 function updateTime() {
     let now = new Date();
@@ -29,6 +31,7 @@ async function loadProducts() {
     try {
         let response = await fetch('js/produits.json');
         let data = await response.json();
+        allProducts = data;
         if (window.location.pathname.includes("produits.html")){
             displayProducts(data);
         }
@@ -42,6 +45,7 @@ async function loadProducts() {
 }
 function displayProducts(data) {
     const productsContainer = document.getElementById('produits');
+    productsContainer.innerHTML = '';
     data.forEach(product => {
         let productCard = document.createElement('div');
         productCard.className = 'card';
@@ -55,6 +59,16 @@ function displayProducts(data) {
         productCard.addEventListener('click', () => showProductDetails(product));
         productsContainer.appendChild(productCard);
     });
+}
+
+function searchProducts() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const filteredProducts = allProducts.filter(product => 
+        product.nom.toLowerCase().includes(searchInput) ||
+        product.description.toLowerCase().includes(searchInput) ||
+        product.categiorie.some(category => category.toLowerCase().includes(searchInput))
+    );
+    displayProducts(filteredProducts);
 }
 
 /*afficher les détails quand je clic sur un produit */
