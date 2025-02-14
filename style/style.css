@@ -127,43 +127,14 @@ html {
 }
 
 body {
-    background: rgba(224, 231, 200, 0.97);
+    background: rgba(224, 231, 200, 0.96);
+    opacity: 96%;
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    z-index: 0;
 }
-
-/* Barre de défilement prersonalisé / Custom Scrollbar ***************************************************************************************************************************************/
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--taupe);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--gazon);
-    border-radius: 10px;
-    border: 3px solid var(--taupe);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--moutarde);
-}
-
-#err-message {
-    font-size: 21px;
-    text-align: center;
-    font-family: Cmu;
-    letter-spacing: 1px;
-    display: none;
-}
-
 /* entête / header *****************************************************************************************************************************************************************************/
 
 header {
@@ -288,6 +259,15 @@ footer nav ul li a:hover {
     width: 100%;
     height: 150px;
 }
+
+#produits .card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
 #produits .card h4 {
     text-align: center;
     color: var(--vertMinuit);
@@ -349,6 +329,7 @@ footer nav ul li a:hover {
 }
 #image-produit {
     text-align: center;
+max-height: 260px;
 }
 
 #interaction-produit {
@@ -548,8 +529,27 @@ footer nav ul li a:hover {
     background-color: var(--gazon);
     position: absolute;
 }
-
-#adresse-livraison {
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.group-vertical {
+    display: flex;
+    flex-direction: column;
+}
+#adres.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.group-vertical {
+    display: flex;
+    flex-direction: column;
+}
+-livraison {
     display: none;
 }
 #paiement form h5 {
@@ -635,3 +635,98 @@ footer nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* responsive *************************************************************************************************************************************************/
+
+@media screen and (max-width: 1023px) {
+    #details-produit {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 600px;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-color: var(--blancTilleul);
+        opacity: 1;
+        border: 3px groove var(--gazon);
+        border-radius: 20px;
+        display: none;
+        z-index: 100;
+    }
+    #details-produit h2 {
+        font-size: 20px;
+        margin: 5px 0 0 0;
+    }
+    #details-produit .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        cursor: pointer;
+        background-image: url("../images/close.svg");
+        background-position: center;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        border: 1px solid var(--vertMinuit);
+        border-radius: 8px;
+    }
+    
+    #produit-long-description {
+        text-align: justify;
+        font-size: 18px;
+        font-family: Cmu;
+        color: var(--vertMinuit);
+    }
+    #image-produit {
+        text-align: center;
+        max-height: 200px;
+    }
+}
+@media sceen and (max-width:1023px),
+                (max-height: 460px){
+    #image-produit{
+        height: 30%;
+        width: auto;
+    }
+    #image-produit img {
+        height: 100%;
+        width: auto;
+    }
+
+    #produit-long-description {
+        font-size: 4vh;
+    }
+    #details-produit h2 {
+        font-size: 5vh;
+        margin: 1vh 0 0 0;
+    }
+
+    #details-produit .close {
+        position: absolute;
+        top: 3vh;
+        right: 3vh;
+        width: 6vh;
+        height: 6vh;
+        font-size: 30px;
+        cursor: pointer;
+        background-image: url("../images/close.svg");
+        background-position: center;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        border: 1px solid var(--vertMinuit);
+        border-radius: 8px;
+    }
+
+    #prix-produit {
+        font-size: 3vh;
+    }
+
+    #add-panier {
+        font-size: 3vh;
+        width: 5vh;
+        height: 5vh;
+    }
+}

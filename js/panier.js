@@ -95,8 +95,9 @@ function acheter(valeur){
 function paiement(accept) {
     if (accept == true) {
         if (activerPaiement()){
-            errMessage("Merci d'avoir complété la simulation de commande ! Nous espérons que vous avez apprécié l'expérience.", true);
+            alert("Merci d'avoir complété la simulation de commande ! Nous espérons que vous avez apprécié l'expérience.");
             clearCartAndForm();
+            window.location.replace("index.html");
         } else {
             errMessage("Veuillez remplir les champs obligatoires manquants avant de valider votre commande !", false);
         }

@@ -1,11 +1,9 @@
 var panier = JSON.parse(localStorage.getItem("panier")) || []; //J'utilise ici var car il porte partout.
 var compte = {
-    "email": "",
-    "pass": "",
-    "token": ""
+    "email" : "",
+    "pass" : "",
+    "token" : ""
 }
-
-let allProducts = [];
 
 /*met heure en temps réel toutes les 15 secondes. */
 function updateTime() {
@@ -31,7 +29,6 @@ async function loadProducts() {
     try {
         let response = await fetch('js/produits.json');
         let data = await response.json();
-        allProducts = data;
         if (window.location.pathname.includes("produits.html")){
             displayProducts(data);
         }
@@ -45,7 +42,6 @@ async function loadProducts() {
 }
 function displayProducts(data) {
     const productsContainer = document.getElementById('produits');
-    productsContainer.innerHTML = '';
     data.forEach(product => {
         let productCard = document.createElement('div');
         productCard.className = 'card';
@@ -59,16 +55,6 @@ function displayProducts(data) {
         productCard.addEventListener('click', () => showProductDetails(product));
         productsContainer.appendChild(productCard);
     });
-}
-
-function searchProducts() {
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    const filteredProducts = allProducts.filter(product => 
-        product.nom.toLowerCase().includes(searchInput) ||
-        product.description.toLowerCase().includes(searchInput) ||
-        product.categiorie.some(category => category.toLowerCase().includes(searchInput))
-    );
-    displayProducts(filteredProducts);
 }
 
 /*afficher les détails quand je clic sur un produit */
@@ -169,31 +155,29 @@ function generateToken(){
 }
 
 /* Gestion cookies */
-function createCookie(token) {
+function createCookie(token){
     let dateExpire = new Date();
-    dateExpire.setDate(dateExpire.getDate() + 700);
-    document.cookie = `token=${token}; expires=${dateExpire.toUTCString()}; path=/ ; secure=false`;
+    dateExpire.setDate(dateExpire.getDate()+700);
+    document.cookie = "token="+token+"; expires="+dateExpire.toGMTString()+"; path=/";
 }
 function deleteCookie(){
     let dateExpire = new Date();
-    document.cookie = "token= ;expires="+dateExpire.toGMTString()+" ; path=/ secure=false";
+    document.cookie = "token= ;expires="+dateExpire.toGMTString()+" ; path=/";
 }
-function readCookie() {
+function readCookie(){
     let tableCookie = document.cookie.split(";"),
         nomCookie = "token",
         valeurCookie = "";
-    for (let i = 0; i < tableCookie.length; i++) {
-        let cookie = tableCookie[i].trim();
-        if (cookie.startsWith(nomCookie + "=")) {
-            valeurCookie = cookie.split("=")[1];
+    for (let i = 0; i < tableCookie.length; i++){
+        if(tableCookie[i].indexOf(nomCookie) != -1){
+            valeurCookie = tableCookie[i].substring(nomCookie.length + tableCookie[i].indexOf(nomCookie), tableCookie[i].length);
         }
     }
     return valeurCookie;
 }
 
 /* créer un compte */
-function créerCompte(event) {
-    event.preventDefault();
+function créerCompte(){
     let elements = ["inscription-email", "inscription-password", "inscription-password-confirm"],
         status = true;
     for (let i = 0; i < elements.length; i++){
@@ -205,62 +189,19 @@ function créerCompte(event) {
         if (document.getElementById("inscription-password").value === document.getElementById("inscription-password-confirm").value){
             compte.email = document.getElementById("inscription-email").value;
             compte.pass = document.getElementById("inscription-password").value;
-            localStorage.setItem("compte", JSON.stringify(compte));
-            errMessage("Votre compte a été créé, vous pouvez à présent vous connecter", true);
+            errMessage("votre compte a été créer, vous pouvez à présent vous conencter", true);
         } else {
             document.getElementById("inscription-password").style = "border: 1px solid #db4f2c";
             document.getElementById("inscription-password-confirm").style = "border: 1px solid #db4f2c";
-            errMessage("Les mots de passe ne sont pas identiques !", false);
+            errMessage("Les mot de passes ne sont pas identiques !", false);
         }
     } else {
         errMessage("Veuillez remplir les éléments obligatoires pour pouvoir créer votre compte", false);
     }
 }
-/* changer mot de passe */
-function changePassword(){
-    event.preventDefault();
-    let elements = ["nouveau-pass", "confirm-nouveau-pass"];
-    let status = true;
-    for (let i=0; i< elements.length; i++){
-        if(!verifEtat(elements[i])){
-            status = false;
-        }
-    }
-    if (status){
-        if (document.getElementById("nouveau-pass").value === document.getElementById("confirm-nouveau-pass").value){
-            compte.pass = document.getElementById("nouveau-pass").value;
-            localStorage.setItem("compte", JSON.stringify(compte));
-            errMessage("Votre mot de pass a bien été changé", true);
-        } else {
-            for (let i = 0; i<elements.length;i++){
-                document.getElementById(elements[i]).style = "border: 1px solid #db4f2c";
-            }
-            errMessage("Les mots de passes ne sont pas identiques",false);
-        }
-    } else {
-        errMessage("Les mot de passes ne peuvent pas être vide", false);
-    }
-}
-/* supprimer le compte */
-function deleteCompte(){
-    if (confirm("La suppression du compte effacera toutes vos données. Une fois confirmé cette action devient irréversible!")){
-        compte.email = "";
-        compte.pass = "";
-        compte.token = "";
-        deleteCookie();
-        localStorage.setItem("compte", JSON.stringify(compte));
-        alert("Votre compte a bien été supprimé, et toutes les données éffacés");
-        errMessage("votre compte a bien été supprimé, toutes les données sont éffacés.<br>Vous serez redirigé vers la page d'accueil dans moins de 1 minute", true);
-        setTimeout (function(){
-            window.location.replace("index.html");
-        }, 20000);
-    }
-}
-
 /* se connecter */
-function connexion(event) {
-    event.preventDefault(); // Empêcher le rafraîchissement de la page
-    let elements = ["connexion-email", "connexion-password"],
+function connexion(){
+    let elements = ["conexion-email", "connexion-password"],
         status = true;
     for (let i = 0; i < elements.length; i++){
         if (!verifEtat(elements[i])){
@@ -269,37 +210,19 @@ function connexion(event) {
     }
 
     if (status){
-        let savedCompte = JSON.parse(localStorage.getItem("compte"));
-        if (savedCompte && savedCompte.email && savedCompte.pass){
-            if ((document.getElementById(`connexion-email`).value == savedCompte.email) && (document.getElementById(`connexion-password`).value == savedCompte.pass)){
+        if (compte.email != "" && compte.pass != ""){
+            if ((document.getElementById(`conexion-email`).value == compte.email) && (document.getElementById(`connexion-password`).value == compte.pass)){
                 let jeton = generateToken();
-                savedCompte.token = jeton;
-                localStorage.setItem("compte", JSON.stringify(savedCompte));
+                compte.token = jeton;
                 createCookie(jeton);
-                errMessage("Connexion réussie", true);
+                errMessage("Bientôt vous pourrez vous connecter", true);
             } else {
-                errMessage(`L'adresse email et/ou le mot de passe sont incorrects`, false);
+                errMessage(`L'adresse email et/ou le mot de passe sont incorrect`, false);
             }
         } else {
             errMessage(`Vous n'avez pas de compte !`, false);
         }
     } else {
-        errMessage(`Veuillez remplir les champs obligatoires`, false);
-    }
-}
-
-/* fermer le message de sécurité */
-function fermerMessageSecurite(){
-    document.getElementById("message-securité").style.display = "none";
-}
-
-/* vérifier si connecté */
-function suisJeConnecte(){
-    let savedCompte = JSON.parse(localStorage.getItem("compte"));
-    let navToken = readCookie();
-    if (navToken != "" && savedCompte.token == navToken){
-        window.location.replace("connected.html");
-    } else {
-        window.location.replace("connexion.html");
+        errMessage(`Veuillez remplir les chams obligatoires`, false);
     }
 }

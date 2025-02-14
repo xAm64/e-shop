@@ -3,7 +3,7 @@ function afficheHeader(){
     let contenu = 
         '<nav>'+
             '<ul>'+
-                '<li><a href="produits.html"><img id="logoSite" src="images/logo.svg"></a></li>'+
+                '<li><a href="produits.html"><img id="logoSite" src="images/logo.svg" alt="E-shop" name="accueil"></a></li>'+
                 '<li>';
                     if (window.location.pathname.includes("index.html")){
                         contenu += '<a href="#"  class="curent-page" onclick="alert(`Vous êtes déjà sur la page d\'accueil`);">';
