@@ -1,9 +1,9 @@
 var panier = JSON.parse(localStorage.getItem("panier")) || []; //J'utilise ici var car il porte partout.
-var compte = {
-    "email" : "",
-    "pass" : "",
-    "token" : ""
-}
+var compte = JSON.parse(localStorage.getItem("compte")) || {
+    "email": "",
+    "pass": "",
+    "token": ""
+};
 
 /*met heure en temps réel toutes les 15 secondes. */
 function updateTime() {
@@ -177,52 +177,71 @@ function readCookie(){
 }
 
 /* créer un compte */
-function créerCompte(){
+function créerCompte(event) {
+    event.preventDefault();
     let elements = ["inscription-email", "inscription-password", "inscription-password-confirm"],
         status = true;
-    for (let i = 0; i < elements.length; i++){
-        if (!verifEtat(elements[i])){
+    for (let i = 0; i < elements.length; i++) {
+        if (!verifEtat(elements[i])) {
             status = false;
         }
     }
-    if (status){
-        if (document.getElementById("inscription-password").value === document.getElementById("inscription-password-confirm").value){
+    if (status) {
+        if (document.getElementById("inscription-password").value === document.getElementById("inscription-password-confirm").value) {
             compte.email = document.getElementById("inscription-email").value;
             compte.pass = document.getElementById("inscription-password").value;
-            errMessage("votre compte a été créer, vous pouvez à présent vous conencter", true);
+            localStorage.setItem("compte", JSON.stringify(compte));
+            errMessage("Votre compte a été créé, vous pouvez à présent vous connecter", true);
         } else {
             document.getElementById("inscription-password").style = "border: 1px solid #db4f2c";
             document.getElementById("inscription-password-confirm").style = "border: 1px solid #db4f2c";
-            errMessage("Les mot de passes ne sont pas identiques !", false);
+            errMessage("Les mots de passe ne sont pas identiques !", false);
         }
     } else {
         errMessage("Veuillez remplir les éléments obligatoires pour pouvoir créer votre compte", false);
     }
 }
+
 /* se connecter */
-function connexion(){
-    let elements = ["conexion-email", "connexion-password"],
+function connexion(event) {
+    event.preventDefault();
+    let elements = ["connexion-email", "connexion-password"],
         status = true;
-    for (let i = 0; i < elements.length; i++){
-        if (!verifEtat(elements[i])){
+    for (let i = 0; i < elements.length; i++) {
+        if (!verifEtat(elements[i])) {
             status = false;
         }
     }
 
-    if (status){
-        if (compte.email != "" && compte.pass != ""){
-            if ((document.getElementById(`conexion-email`).value == compte.email) && (document.getElementById(`connexion-password`).value == compte.pass)){
+    if (status) {
+        let savedCompte = JSON.parse(localStorage.getItem("compte"));
+        if (savedCompte && savedCompte.email && savedCompte.pass) {
+            if ((document.getElementById("connexion-email").value == savedCompte.email) && (document.getElementById("connexion-password").value == savedCompte.pass)) {
                 let jeton = generateToken();
-                compte.token = jeton;
+                savedCompte.token = jeton;
+                localStorage.setItem("compte", JSON.stringify(savedCompte));
                 createCookie(jeton);
-                errMessage("Bientôt vous pourrez vous connecter", true);
+                window.location.replace("connected.html");
+                errMessage("Connexion réussie", true);
             } else {
-                errMessage(`L'adresse email et/ou le mot de passe sont incorrect`, false);
+                errMessage("L'adresse email et/ou le mot de passe sont incorrects", false);
             }
         } else {
-            errMessage(`Vous n'avez pas de compte !`, false);
+            errMessage("Vous n'avez pas de compte !", false);
         }
     } else {
-        errMessage(`Veuillez remplir les chams obligatoires`, false);
+        errMessage("Veuillez remplir les champs obligatoires", false);
+    }
+}
+
+/* vérifier si connecté */
+function suisJeConnecte() {
+    let tokenNav = readCookie(),
+        savedCompte = JSON.parse(localStorage.getItem("compte")),
+        userToken = savedCompte.token;
+    if (tokenNav == userToken) {
+        window.location.replace("connected.html");
+    } else {
+        window.location.replace("connexion.html");
     }
 }

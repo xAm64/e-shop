@@ -108,6 +108,7 @@ function afficherCompte(){
             </div>
         </div>`;
     } else {
-        window.location.replace("connexion.html");
+        errMessage("erreur 500", false);
+        //window.location.replace("connexion.html");
     }
 }
