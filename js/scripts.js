@@ -164,13 +164,14 @@ function deleteCookie(){
     let dateExpire = new Date();
     document.cookie = "token= ;expires="+dateExpire.toGMTString()+" ; path=/";
 }
-function readCookie(){
+function readCookie() {
     let tableCookie = document.cookie.split(";"),
         nomCookie = "token",
         valeurCookie = "";
-    for (let i = 0; i < tableCookie.length; i++){
-        if(tableCookie[i].indexOf(nomCookie) != -1){
-            valeurCookie = tableCookie[i].substring(nomCookie.length + tableCookie[i].indexOf(nomCookie), tableCookie[i].length);
+    for (let i = 0; i < tableCookie.length; i++) {
+        let cookie = tableCookie[i].trim();
+        if (cookie.startsWith(nomCookie + "=")) {
+            valeurCookie = cookie.split("=")[1];
         }
     }
     return valeurCookie;
@@ -240,8 +241,8 @@ function suisJeConnecte() {
         savedCompte = JSON.parse(localStorage.getItem("compte")),
         userToken = savedCompte.token;
     if (tokenNav == userToken) {
-        window.location.replace("connected.html");
+        return true;
     } else {
-        window.location.replace("connexion.html");
+        return false;
     }
 }

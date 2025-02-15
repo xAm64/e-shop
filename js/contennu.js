@@ -41,7 +41,7 @@ function afficheHeader(){
                 '</div>';
             }
             contenu += '<div class="user-login" id="navbar-login">'+
-                '<a href="#" onclick="suisJeConnecte();">'+
+                '<a href="#" onclick="redirect();">'+
                     '<img src=" images/user.svg " alt="Utilisateur ">'+
                 '</a>'+
             '</div>'+
@@ -81,10 +81,16 @@ function genererHtmlMotPasse(){
     document.getElementById("suggestion-passwords").innerHTML = htmlSuggest;
 }
 
+function redirect(){
+    if (suisJeConnecte()){
+        window.location.replace("connected.html");
+    } else {
+        window.location.replace("connexion.html");
+    }
+}
+
 function afficherCompte(){
-    let savedCompte = JSON.parse(localStorage.getItem("compte"));
-    let navToken = readCookie();
-    if (navToken != "" && savedCompte.token == navToken){
+    if (suisJeConnecte()){
         document.getElementById("gestion-compte").innerHTML = `
         <h2 class="danger center">Gérér mon compte</h2>
         <div id="err-message"></div>
@@ -108,7 +114,7 @@ function afficherCompte(){
             </div>
         </div>`;
     } else {
-        errMessage("erreur 500", false);
+        errMessage("erreur", false);
         //window.location.replace("connexion.html");
     }
 }
