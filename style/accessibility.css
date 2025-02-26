@@ -1,16 +1,16 @@
 /* variables ************************************************************************************************************************************************************************************/
 
 /* source https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-    :root {
+:root {
     /* principales / main */
-    --gazon: #BDE038;
-    --moutarde: #A3AB78;
-    --taupe: #818274;
-    --bleuVertAcier: #506266;
-    --vertMinuit: #10454F;
+    --vertLight: #E2F1A9;
+    --jauneLeger: #FFFFC6;
+    --brun: #514D3C;
+    --AnthraciceFonce: #2D3739;
+    --VertFonce: #123D15;
     /* secondaires / secondary*/
-    --blancTilleul: #e0e7c8;
-    --rouge : #db4f2c;
+    --blancCasse: #F7F5F0;
+    --brique : #7B2915
 }
 
 /* source https://www.w3schools.com/css/css3_fonts.asp */
@@ -36,7 +36,7 @@
 }
 
 .danger {
-    color: var(--rouge) !important;
+    color: var(--brique) !important;
     font-weight: 660;
 }
 .btn {
@@ -44,26 +44,26 @@
     height: 35px;
     width: 130px;
     border-radius: 8px;
-    border: 1px solid var(--taupe);
+    border: 1px solid var(--brun);
     font-size: 22px;
     padding: 5px;
 }
 .bt-success {
-    background-color: var(--gazon);
-    color: var(--vertMinuit);
+    background-color: var(--vertLight);
+    color: var(--VertFonce);
 }
 .bt-danger {
-    background-color: var(--rouge);
-    color: var(--blancTilleul);
+    background-color: var(--brique);
+    color: var(--blancCasse);
 }
 
 
 .search-bar input {
     width: 300px;
     height: 30px;
-    border: 1px solid var(--gazon);
-    color: var(--vertMinuit);
-    background-color: var(--blancTilleul);
+    border: 1px solid var(--vertLight);
+    color: var(--VertFonce);
+    background-color: var(--blancCasse);
     border-radius: 9px;
     padding: 0 6px;
     font-family: Cmu;
@@ -71,7 +71,7 @@
 }
 .search-bar input:focus {
     outline: none;
-    border: 1px solid var(--moutarde);
+    border: 1px solid var(--jauneLeger);
 }
 
 .user-login img {
@@ -92,7 +92,7 @@
     text-align: center;
     font-size: 35px;
     font-family: FiraSans;
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
     letter-spacing: 4px;
 }
 .leger-gras {
@@ -126,8 +126,7 @@ html {
 }
 
 body {
-    background: rgba(224, 231, 200, 0.96);
-    opacity: 96%;
+    background-color: var(--blancCasse);
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -138,8 +137,8 @@ body {
 
 header {
     height: 130px;
-    background: var(--bleuVertAcier);
-    color: var(--gazon);
+    background: var(--AnthraciceFonce);
+    color: var(--vertLight);
     flex-shrink: 0;
     border-radius: 0 0 6% 6%;
     font-size: 20px;
@@ -148,7 +147,7 @@ header {
 }
 
 header nav {
-    background-color: var(--taupe);
+    background-color: var(--brun);
     overflow: hidden;
 }
 
@@ -161,18 +160,18 @@ header nav ul li {
 
 header nav ul li a {
     display: block;
-    color: var(--blancTilleul);
+    color: var(--blancCasse);
     text-align: center;
     padding: 10px 16px;
     text-decoration: none;
 }
 
 header nav ul li a:hover {
-    color: var(--vertMinuit);
+    color: var(--vertLight);
 }
 
 header nav .curent-page {
-    color: var(--moutarde);
+    color: var(--jauneLeger);
     cursor: not-allowed;
 }
 
@@ -183,11 +182,12 @@ header #icon-nav-droit{
     cursor: pointer;
     width: 36px;
     height: 40px;
-    background-image: url("../images/accessibility.svg");
+    background-image: url("../images/accessibility-on.svg");
+    background-color: var(--vertLight);
     background-position: center;
     background-size: 90%;
     background-repeat: no-repeat;
-    border: 2px solid var(--gazon);
+    border: 2px solid var(--vertLight);
     border-radius: 8px;
 }
 
@@ -216,7 +216,7 @@ main {
 
 footer {
     height: 60px;
-    background: var(--moutarde);
+    background: var(--jauneLeger);
     padding: 8px;
     border-radius: 6% 6% 0 0;
 }
@@ -235,7 +235,7 @@ footer nav ul li {
 
 footer nav ul li a {
     text-decoration: none;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
 }
 
 footer nav ul li a:hover {
@@ -255,11 +255,11 @@ footer nav ul li a:hover {
     width: 300px;
     margin: 10px;
     padding: 10px;
-    border: 2px solid var(--gazon);
+    border: 2px solid var(--brun);
     border-radius: 6px;
-    background-color: var(--blancTilleul);
+    background-color: var(--blancCasse);
     opacity: 1;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
     margin: 0;
     padding: 0;
     display: flex;
@@ -285,7 +285,7 @@ footer nav ul li a:hover {
 
 #produits .card h4 {
     text-align: center;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
     font-size: 25px;
     letter-spacing: 2px;
 }
@@ -313,9 +313,9 @@ footer nav ul li a:hover {
     height: 600px;
     width: 80%;
     padding: 10px;
-    background-color: var(--blancTilleul);
+    background-color: var(--blancCasse);
     opacity: 1;
-    border: 3px groove var(--gazon);
+    border: 3px groove var(--vertLight);
     border-radius: 20px;
     display: none;
     z-index: 100;
@@ -332,7 +332,7 @@ footer nav ul li a:hover {
     background-position: center;
     background-size: 35px;
     background-repeat: no-repeat;
-    border: 1px solid var(--vertMinuit);
+    border: 1px solid var(--VertFonce);
     border-radius: 8px;
 }
 
@@ -340,7 +340,7 @@ footer nav ul li a:hover {
     text-align: justify;
     font-size: 20px;
     font-family: Cmu;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
 }
 #image-produit {
     text-align: center;
@@ -361,7 +361,7 @@ max-height: 260px;
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
-    color: var(--gazon);
+    color: var(--vertLight);
     text-align: center;
     font-size: 30px;
     cursor: pointer;
@@ -380,11 +380,11 @@ max-height: 260px;
     width: 300px;
     margin: 10px;
     padding: 10px;
-    border: 2px solid var(--gazon);
+    border: 2px solid var(--vertLight);
     border-radius: 6px;
-    background-color: var(--blancTilleul);
+    background-color: var(--blancCasse);
     opacity: 1;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
     margin: 0;
     padding: 5px;
     font-size: 16px;
@@ -406,13 +406,13 @@ max-height: 260px;
 }
 #caroussel-panier table {
     width: 100%;
-    border: 2px solid var(--moutarde);
+    border: 2px solid var(--jauneLeger);
     border-collapse: collapse;
 }
 #caroussel-panier td {
-    border: 1px solid var(--bleuVertAcier);
+    border: 1px solid var(--AnthraciceFonce);
     padding: 5px;
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
 }
 #caroussel-panier td:first-child {
     width: 60%;
@@ -464,7 +464,7 @@ max-height: 260px;
     margin: 0 -8px;
     width: 100%;
     height: 45px;
-    border: 1px solid var(--taupe);
+    border: 1px solid var(--brun);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -480,9 +480,9 @@ max-height: 260px;
     height: 700px;
     width: 80%;
     padding: 10px;
-    background-color: var(--blancTilleul);
+    background-color: var(--blancCasse);
     opacity: 1;
-    border: 3px groove var(--gazon);
+    border: 3px groove var(--vertLight);
     border-radius: 20px;
     z-index: 100;
     display: none;
@@ -492,7 +492,7 @@ max-height: 260px;
     text-align: center;
     font-size: 30px;
     font-family: FiraSans;
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
     letter-spacing: 4px;
     margin: 0;
 }
@@ -502,7 +502,7 @@ max-height: 260px;
 #paiement form label{
     font-size: 16px;
     font-family: FiraSans;
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
 }
 #gestion-compte form input,
 #user-connexion form input,
@@ -510,9 +510,9 @@ max-height: 260px;
 #paiement form input {
     width: 300px;
     height: 30px;
-    border: 1px solid var(--taupe);
-    color: var(--vertMinuit);
-    background-color: var(--blancTilleul);
+    border: 1px solid var(--brun);
+    color: var(--VertFonce);
+    background-color: var(--blancCasse);
     border-radius: 9px;
     padding: 0 6px;
     font-family: Cmu;
@@ -530,9 +530,9 @@ max-height: 260px;
     height: 18px;
     top: -3px;
     left: 0;
-    border: 1px solid var(--taupe);
+    border: 1px solid var(--brun);
     border-radius: 4px;
-    background-color: var(--blancTilleul);
+    background-color: var(--blancCasse);
 }
 #paiement input[type="checkbox"]:checked:after{
     content: "✅";
@@ -540,8 +540,8 @@ max-height: 260px;
     top: -3px;
     width: 18px;
     height: 18px;
-    border: 1px solid var(--taupe);
-    background-color: var(--gazon);
+    border: 1px solid var(--brun);
+    background-color: var(--vertLight);
     position: absolute;
 }
 .container {
@@ -577,9 +577,9 @@ max-height: 260px;
 
 #contactez-moi textarea {
     width: 620px;
-    background-color: var(--blancTilleul);
-    border: 1px solid var(--taupe);
-    color: var(--vertMinuit);
+    background-color: var(--blancCasse);
+    border: 1px solid var(--brun);
+    color: var(--VertFonce);
     border-radius: 8px;
     padding: 5px;
     font-family: Cmu;
@@ -589,7 +589,7 @@ max-height: 260px;
 #suggestion-passwords {
     font-family: Cmu;
     font-size: 16px;
-    color: var(--vertMinuit);
+    color: var(--VertFonce);
 }
 #suggestion-passwords li {
     list-style: none
@@ -607,7 +607,7 @@ max-height: 260px;
 #user-connexion h4{
     font-family: FiraSans;
     letter-spacing: 2px;
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
     font-size: 20px;
 }
 #user-connexion form {
@@ -617,8 +617,8 @@ max-height: 260px;
 #user-connexion form input[type="submit"]{
     width: 200px;
     margin: 0 auto;
-    background-color: var(--gazon);
-    color: var(--bleuVertAcier);
+    background-color: var(--vertLight);
+    color: var(--AnthraciceFonce);
 }
 #suppr-compte,
 #gestion-compte form,
@@ -630,7 +630,7 @@ max-height: 260px;
 }
 
 #message-securité button {
-    border: 1px solid var(--rouge);
+    border: 1px solid var(--brique);
     margin: 0 0 0 10px;
     padding: 0;
     border-radius: 4px;
@@ -639,7 +639,7 @@ max-height: 260px;
 
 /* gérer compte / manage account *****************************************************************************************************/
 #gestion-compte h4 {
-    color: var(--bleuVertAcier);
+    color: var(--AnthraciceFonce);
     font-size: 19px;
     font-family: FiraSans;
     letter-spacing: 1px;
@@ -662,9 +662,9 @@ max-height: 260px;
         width: 100%;
         height: 100%;
         padding: 5px;
-        background-color: var(--blancTilleul);
+        background-color: var(--blancCasse);
         opacity: 1;
-        border: 3px groove var(--gazon);
+        border: 3px groove var(--vertLight);
         border-radius: 20px;
         display: none;
         z-index: 100;
@@ -685,7 +685,7 @@ max-height: 260px;
         background-position: center;
         background-size: 35px;
         background-repeat: no-repeat;
-        border: 1px solid var(--vertMinuit);
+        border: 1px solid var(--VertFonce);
         border-radius: 8px;
     }
     
@@ -693,7 +693,7 @@ max-height: 260px;
         text-align: justify;
         font-size: 18px;
         font-family: Cmu;
-        color: var(--vertMinuit);
+        color: var(--VertFonce);
     }
     #image-produit {
         text-align: center;
@@ -731,7 +731,7 @@ max-height: 260px;
         background-position: center;
         background-size: 35px;
         background-repeat: no-repeat;
-        border: 1px solid var(--vertMinuit);
+        border: 1px solid var(--VertFonce);
         border-radius: 8px;
     }
 

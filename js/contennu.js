@@ -27,6 +27,7 @@ function afficheHeader(){
                 contenu += 'Panier <span id="cart-count"></span></a></li>'+
             '</ul>'+
         '</nav>'+
+        '<div id="icon-nav-droit" onclick="toggleStylesheet()"></div>'+
         '<div id="banner-header">'+
             '<div id="current-time">00:00</div>';
             if (window.location.pathname.includes("produits.html")){

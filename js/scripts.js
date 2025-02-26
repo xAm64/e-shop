@@ -4,6 +4,8 @@ var compte = JSON.parse(localStorage.getItem("compte")) || {
     "pass": "",
     "token": ""
 };
+const currentStylesheet = document.getElementById("stylesheet");
+var accessibility = localStorage.getItem("accessibility") === "true"; // Initialiser la valeur à partir de localStorage
 
 /*met heure en temps réel toutes les 15 secondes. */
 function updateTime() {
@@ -23,6 +25,30 @@ function updateCartCount() {
     const cartCount = panier.reduce((total, product) => total + (product.quantity || 1), 0);
     document.getElementById('cart-count').textContent = cartCount;
 }
+
+/* accéssibilité / accessibility */
+function toggleStylesheet() {
+    if (!accessibility) {
+        currentStylesheet.setAttribute("href", "style/accessibility.css");
+        accessibility = true;
+    } else {
+        currentStylesheet.setAttribute("href", "style/style.css");
+        accessibility = false;
+    }
+    localStorage.setItem("accessibility", accessibility); // Sauvegarder la valeur dans localStorage
+}
+
+function loadAccessibility() {
+    if (accessibility) {
+        currentStylesheet.setAttribute("href", "style/accessibility.css");
+    } else {
+        currentStylesheet.setAttribute("href", "style/style.css");
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadAccessibility();
+});
 
 /* charger les produits */
 async function loadProducts() {
